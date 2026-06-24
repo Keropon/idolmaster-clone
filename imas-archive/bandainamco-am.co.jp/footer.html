@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="ja"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />-->
+<title>バンダイナムコ アミューズメントユニット</title>
+<script src="assets/js/jquery.min.js"></script>
+<!--link href="/assets/css/common_style.css" rel="stylesheet" /-->
+<link href="assets/css/top_a.css" rel="stylesheet">
+<link href="common/tmpl/css/bnam-custom-css__all.min_20250401.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="common_head_link" style="height:76px;margin-top:0"><p><a href="javascript:scrollPageTop()">先頭へ戻る</a></p></div>
+
+<footer id="common_page_footer">
+<div class="footer_wrapper">
+<ul class="footer_nav">
+<li><a href="//bandainamco-am.co.jp/attention/" target="_top">サイトポリシー</a></li>
+<li><a href="//bandainamco-am.co.jp/privacy/" target="_top">プライバシーポリシー</a></li>
+<li><a href="//bandainamco-am.co.jp/allergy/" target="_top">食品のご提供について</a></li>
+<li><a href="https://bnam-customer.my.site.com/FAQ/s/" target="_blank" rel="noopener noreferrer">よくあるご質問・お問い合わせ</a></li>
+</ul>
+</div>
+<div class="footer_wrapper">
+<ul class="footer_copyright">
+<li class="footer_groupLogo"><a href="//xp.bandainamco-am.co.jp/" target="_top"><img src="groupHeader/logo/groupLogo-01-forBlack.svg" alt="BANDAI NAMCO Fun for All into the Future"></a></li>
+<li><small>©Bandai Namco Experience Inc.</small></li>
+</ul>
+</div>
+</footer>
+
+<script>
+function footeriframeResize(){
+    var PageHight = document.body.offsetHeight; // ページの高さを取得
+    window.parent.document.getElementById('footerRRe1234235').style.height = (parseInt(PageHight) + 0) + 'px'; // iframeの高さを変更
+    window.parent.document.getElementById('footerRRe1234235').style.marginBottom = '-10px'; 
+    //console.log("footerHeight " + PageHight);
+}
+window.onload = footeriframeResize;
+$(window).resize(function() {
+    footeriframeResize();
+});
+function scrollPageTop() {
+    $("html, body", parent.document).animate({ scrollTop: 0 }, 200);
+}
+</script>
+
+
+
+
+
+</body></html>

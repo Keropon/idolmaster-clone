@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/*
+font-size list (base: 12px)
+ 67% =  8px
+ 75% =  9px
+ 83% = 10px
+ 92% = 11px        175% = 21px
+100% = 12px        184% = 22px
+108% = 13px        192% = 23px
+117% = 14px        200% = 24px
+125% = 15px        209% = 25px
+133% = 16px        217% = 26px
+142% = 17px
+150% = 18px
+159% = 19px
+167% = 20px
+*/
+
+#specialArea {
+  width: 630px;
+  margin: 30px auto 0;
+}
+.btnBack {
+  width: 69px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left : auto;
+}
+#mainWrap .topContentList {
+  margin-top: 70px;
+}
+.topContentList dl {
+  float: left;
+  width: 290px;
+  margin: 0 12px 30px;
+}
+.topContentList dt {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 117%;
+  color: #F00;
+}
+.topContentList a {
+  text-decoration: none;
+}

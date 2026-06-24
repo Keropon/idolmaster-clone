@@ -1,0 +1,100 @@
+/* =====================================================================
+   animas — FAITHFUL design system for idolmaster-anime.jp (products page).
+   From real css/common.css + products/css/css.css:
+   #666 text, #0099ff links, header_obi.jpg top band, violet #6633CC headings,
+   pink #FF6699/#FF3366/#ed5881, Hiragino stack. Container ~850px.
+   ===================================================================== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family:"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック",sans-serif;
+    background:url(assets/img/header_obi.jpg) repeat-x 0 0, #fff;
+    color:#666666; line-height:1.5; font-size:13px;
+}
+img { display:block; border:0; max-width:100%; }
+a { color:#0099ff; text-decoration:none; } a:hover { color:#FF3366; }
+.red{color:#FF0000;} .pink{color:#FF3366;} .violet{color:#660099;} .aqua{color:#33CCFF;}
+
+#outContainer { width:850px; margin:0 auto; background:#fff; }
+
+/* ---- header: logo + information banner ---- */
+.ds-header { display:flex; align-items:center; gap:20px; padding:14px 12px; }
+.ds-header #logo { width:451px; }
+.ds-header .info { margin-left:auto; }
+
+/* ---- subpage menu (png sprite-style row) ---- */
+.ds-menu { display:flex; flex-wrap:wrap; gap:4px; padding:8px 10px; background:#f3e9f2; border-top:2px solid #FF6699; }
+.ds-menu a { font-size:12px; font-weight:700; color:#6633CC; padding:5px 10px; background:#fff; border:1px solid #e2cfe0; border-radius:4px; }
+.ds-menu a:hover { background:#FF6699; color:#fff; }
+
+#mainContainer { padding:16px 14px; }
+
+/* =====================================================================
+   DESIGN-SYSTEM COMPONENTS (semantic = real source)
+   ===================================================================== */
+
+/* Heading lv3 = h3.png (violet) ------------------------------------- */
+.ds-h3 { color:#6633CC; font-size:18px; font-weight:bold; padding:6px 0 6px 14px;
+    border-left:8px solid #6633CC; margin:0 0 12px; }
+
+/* Heading lv4 = h4_star / h4_bddvd / h4_cd (pink, star bullet) ------- */
+.ds-h4 { color:#FF3366; font-size:15px; font-weight:bold; padding:2px 0 4px 22px;
+    background:url(assets/products/img/h4_star_red.jpg) no-repeat 0 3px; border-bottom:1px dotted #DAC7D2; margin:14px 0 8px; }
+
+/* Product row = jacket(left) + spec/price(right) -------------------- */
+.ds-product { display:flex; gap:18px; padding:12px 0; border-bottom:1px dotted #DAC7D2; }
+.ds-product .jk { flex:0 0 230px; }
+.ds-product .jk img { width:230px; border:1px solid #DAC7D2; }
+.ds-product .meta { flex:1 1 auto; }
+.ds-product .title { color:#6633CC; font-weight:bold; font-size:15px; margin-bottom:6px; }
+.ds-product .price { color:#D31D4F; font-weight:bold; font-size:16px; margin:8px 0; }
+.ds-product .buy { display:flex; gap:6px; flex-wrap:wrap; }
+
+/* Shop heading = h5.shop (bg_shop.jpg) ------------------------------ */
+.ds-shop-h { color:#fff; font-weight:bold; background:url(assets/products/img/bg_shop.jpg) no-repeat 0 0, #FF6699;
+    padding:8px 14px; }
+
+/* Information banner strip = #information -------------------------- */
+.ds-info-bnr { display:inline-block; }
+
+/* Promotional banner ------------------------------------------------ */
+.ds-promo { background:#6633CC; color:#fff; font-weight:bold; text-align:center; padding:12px; letter-spacing:.04em; }
+
+/* Buy button = btnBuy / btnTokuten png ----------------------------- */
+.ds-btn { display:inline-block; }
+
+/* footer ----------------------------------------------------------- */
+.ds-footer { background:#6633CC; color:#fff; text-align:center; padding:18px; margin-top:18px; font-size:12px; }
+.ds-footer a { color:#fff; text-decoration:underline; }
+
+/* ---- components from the anime SUBPAGES (intro/character/news/...) ---- */
+
+/* Page-title header = titleNews.png / titleCharacter.png (serif word) -> CSS */
+.ds-pagettl { font-family:Georgia,"Times New Roman",serif; font-size:34px; font-weight:bold; color:#222;
+    letter-spacing:.02em; padding:14px 0 6px; border-bottom:3px solid #FF3366; margin-bottom:16px; }
+.ds-pagettl span { color:#6633CC; font-size:13px; font-family:var(--f,sans-serif); margin-left:10px; }
+
+/* News list = .newsTxt / .date / .new (real classes) */
+.ds-news-list { list-style:none; margin:0; padding:0; max-width:680px; }
+.ds-news-list li { padding:12px 4px; border-bottom:1px dotted #DAC7D2; }
+.ds-news-list .date { color:#6633CC; font-weight:bold; font-size:12px; }
+.ds-news-list .new, .ds-news-list .ds-new { color:#FF3366; font-weight:bold; font-size:11px; margin-left:6px; }
+.ds-news-list .newsTxt, .ds-news-list a { color:#444; } .ds-news-list a:hover { color:#FF3366; }
+
+/* Character summary = .charaSummary */
+.ds-chara { display:flex; gap:14px; padding:12px; border:1px solid #DAC7D2; border-radius:8px; background:#fff; }
+.ds-chara .ph { flex:0 0 84px; height:104px; border-radius:6px;
+    background:linear-gradient(150deg,#6633CC,#FF6699); display:grid; place-items:center; color:#fff; font-weight:bold; }
+.ds-chara .nm { color:#6633CC; font-weight:bold; font-size:16px; }
+.ds-chara .cv { color:#999; font-size:11px; }
+.ds-chara .bio { color:#555; font-size:12px; margin-top:6px; }
+
+/* ---- BACKGROUNDS (real bg images) ---- */
+.ds-bg-obi { background:url(assets/img/header_obi.jpg) repeat-x top, #fff; }   /* page top band */
+.ds-bg-shop { background:url(assets/products/img/bg_shop.jpg) no-repeat, #FF6699; } /* shop heading band */
+.ds-swatch { height:90px; border:1px solid #DAC7D2; border-radius:4px; display:flex; align-items:flex-end; }
+.ds-swatch code { background:rgba(255,255,255,.85); font-size:10px; padding:2px 6px; margin:6px; border-radius:3px; }
+
+/* ---- ANIMATIONS ---- */
+.ds-anim-reveal { opacity:0; transform:translateY(18px); animation:dsrise .8s ease forwards; }
+@keyframes dsrise { to { opacity:1; transform:none; } }
+@media (prefers-reduced-motion:reduce){ .ds-anim-reveal{ opacity:1; transform:none; animation:none; } }

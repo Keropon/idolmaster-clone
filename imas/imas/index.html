@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=768">
+<title>THE IDOLM@STER [トップページ]</title>
+<meta name="description" content="idolmaster.jp（リニューアル版トップ）の faithful 再現。実際のレイアウト・画像・配色・ロールオーバー／バナーローテーションを現代の HTML/CSS/JS で復元。">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="container">
+
+  <!-- ===== header: 枠 + タイトル + BNGロゴ ===== -->
+  <header id="header">
+    <div class="hd-inner">
+      <img class="hd-waku-l" src="assets/common/images/hd_waku_l.gif" alt="" width="20" height="97">
+      <div class="hd-center">
+        <div class="hd-title">
+          <a href="index.html"><img src="assets/common/images/hd_01_title.gif" alt="THE IDOLM@STER" width="378" height="64"></a>
+          <img src="assets/common/images/hd_02_img.gif" alt="" width="290" height="64">
+          <a href="https://www.bandainamcoent.co.jp/" target="_blank" rel="noopener"><img src="assets/common/images/hd_03_bng.gif" alt="株式会社バンダイナムコゲームス" width="68" height="64"></a>
+        </div>
+        <!-- ===== global nav: pure HTML+CSS tabs (rollover = :hover, no gifs) ===== -->
+        <nav class="hd-menu" aria-label="global">
+          <a class="ds-navbtn" href="#">キャラクタ紹介</a>
+          <a class="ds-navbtn" href="#">イベント</a>
+          <a class="ds-navbtn" href="#">ダウンロード</a>
+          <a class="ds-navbtn" href="#">アーケード版情報</a>
+          <a class="ds-navbtn" href="#">グッズ販売</a>
+          <a class="ds-navbtn" href="#">マーケットプレース</a>
+          <a class="ds-navbtn" href="#">関連リンク</a>
+          <a class="ds-navbtn" href="#">スタッフコラム</a>
+        </nav>
+      </div>
+      <img class="hd-waku-r" src="assets/common/images/hd_waku_r.gif" alt="" width="20" height="97">
+    </div>
+  </header>
+
+  <!-- ===== main 754 枠 ===== -->
+  <div class="base-bg">
+    <!-- 回転メインバナー（randomAdv の現代版） -->
+    <div class="mainbanner" id="banner" aria-label="main banner"></div>
+
+    <!-- 更新情報 + ゲーム紹介 行 -->
+    <div class="content base-bg2top">
+      <div class="cols">
+
+        <!-- 左：更新情報 -->
+        <section class="newsbox">
+          <img class="news-ttl" src="assets/img_renew/top/new_title.gif" alt="更新情報" width="226" height="32">
+          <div class="news-body">
+            <p class="new-date">2007.xx.xx</p>
+            <p class="news-txt">アーケード版情報を更新しました。<a href="#">&gt;&gt; 設置店舗</a></p>
+            <p class="new-date">2007.xx.xx</p>
+            <p class="news-txt">ダウンロードコンテンツ情報を更新しました。</p>
+            <p class="new-date">2007.xx.xx</p>
+            <p class="news-txt">グッズ販売ページを更新しました。</p>
+          </div>
+          <div class="news-foot">
+            <a class="ds-morebtn" href="#">MORE</a>
+          </div>
+        </section>
+
+        <!-- 右：ゲーム紹介 + ボタン列 -->
+        <section class="gamecol">
+          <div class="game-ttl">
+            <img src="assets/img_renew/top/geme_title.gif" alt="ゲーム紹介" width="186" height="32">
+            <img src="assets/img_renew/top/geme_title2.gif" alt="" width="30" height="32">
+          </div>
+          <div class="game-grid">
+            <div class="game-left">
+              <a href="#"><img data-ro src="assets/img_renew/top/geme_imas.gif" alt="アイドルマスター" width="216" height="65"></a>
+              <a href="#"><img data-ro src="assets/img_renew/top/geme_l4u.gif" alt="アイドルマスター Live For You!" width="216" height="64"></a>
+              <img src="assets/img_renew/top/geme_ft.gif" alt="" width="216" height="27">
+              <img src="assets/img_renew/top/geme_shinsa.gif" alt="" width="216" height="73">
+            </div>
+            <!-- side buttons: pure HTML+CSS (rollover = :hover, no gifs) -->
+            <div class="game-right">
+              <a class="ds-sidebtn" href="#"><span class="tx"><span class="jp">キャラクタ紹介</span><span class="en">CHARACTERS</span></span><span class="arw">»</span></a>
+              <a class="ds-sidebtn" href="#"><span class="tx"><span class="jp">ダウンロード</span><span class="en">DOWNLOAD</span></span><span class="arw">»</span></a>
+              <a class="ds-sidebtn" href="#"><span class="tx"><span class="jp">グッズ販売</span><span class="en">ITEMS</span></span><span class="arw">»</span></a>
+              <a class="ds-sidebtn" href="#"><span class="tx"><span class="jp">マーケットプレース</span><span class="en">MARKETPLACE</span></span><span class="arw">»</span></a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== footer ===== -->
+  <footer class="ft">
+    <div class="ft-bar">
+      <img class="ft-l" src="assets/img_renew/common/ft_l.gif" alt="" width="15" height="34">
+      <a href="#"><img src="assets/img_renew/common/ft_info.gif" alt="ご利用上の注意" width="105" height="34"></a>
+      <a href="#"><img src="assets/img_renew/common/ft_saport.gif" alt="ユーザーサポート" width="105" height="34"></a>
+      <span class="ft-spacer"></span>
+      <img src="assets/img_renew/common/ft_copy.gif" alt="(c)窪岡俊之　(c)2003 2007 NBGI" width="178" height="34">
+      <a href="https://idolmaster.jp/" target="_blank" rel="noopener"><img src="assets/img_renew/common/ft_rogo.gif" alt="アイドルマスターオフィシャルサイトへ" width="104" height="34"></a>
+      <img class="ft-r" src="assets/img_renew/common/ft_r.gif" alt="" width="15" height="34">
+    </div>
+  </footer>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="faithful.js"></script>
+</body>
+</html>

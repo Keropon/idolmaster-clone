@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>imasac2 — Design System（tours 内部コンポーネント）</title>
+<meta name="description" content="idolmaster-tours の内部コンポーネント集（faithful）。Claude Design 用。">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body{ background:#eef4ff; }
+  .dsx{ width:min(100% - 2rem, 900px); margin:1.4rem auto; }
+  .dsx .top{ color:#3860be; font-size:24px; font-weight:900; }
+  .dsx .note{ color:#666; font-size:12px; margin:.3rem 0 1.4rem; }
+  .dsx .item{ background:#fff; border:1px solid #d8d8d8; border-radius:10px; margin-bottom:1.1rem; overflow:hidden; }
+  .dsx .item > h3{ font-size:12px; background:#eaf1ff; color:#3860be; padding:.5rem .8rem; }
+  .dsx .item > h3 code{ color:#00a0c8; }
+  .dsx .demo{ padding:1rem; }
+</style>
+</head>
+<body>
+<div class="dsx">
+  <div class="top">imasac2 — Design System</div>
+  <p class="note">『アイドルマスター ツアーズ』(bandainamco-am.co.jp) の実 CSS（pc.css）と構造から抽出。
+     「セマンティック名 <code>= 実ソース</code>」。配色は原典（青 #3860be・水色 #00cfff・灰 #d8d8d8）。</p>
+
+  <div class="item"><h3>Section / promotional title <code>.ds-title</code></h3>
+    <div class="demo"><div class="ds-title">NEWS<small>お知らせ</small></div></div></div>
+
+  <div class="item"><h3>Link <code>a</code>（#3860be / hover #00cfff）</h3>
+    <div class="demo"><a href="#">店舗を探す</a></div></div>
+
+  <div class="item"><h3>News list <code>.ds-news .row</code></h3>
+    <div class="demo"><div class="ds-news">
+      <div class="row"><span class="date">2024.07.01</span><span class="tag">UPDATE</span><span>新カード追加</span></div>
+      <div class="row"><span class="date">2024.06.15</span><span class="tag">EVENT</span><span>全国ツアー開催決定</span></div>
+    </div></div></div>
+
+  <div class="item"><h3>Brand card grid <code>.ds-brands / .ds-brand</code></h3>
+    <div class="demo"><div class="ds-brands" style="max-width:none">
+      <div class="ds-brand"><img src="assets/images/cardlist/idol-master.png" alt="THE IDOLM@STER"></div>
+      <div class="ds-brand"><img src="assets/images/cardlist/million.png" alt="MILLION LIVE!"></div>
+      <div class="ds-brand"><img src="assets/images/cardlist/shiny.png" alt="SHINY COLORS"></div>
+    </div></div></div>
+
+  <div class="item"><h3>Button <code>.ds-btn</code></h3>
+    <div class="demo"><a class="ds-btn" href="#">店舗を探す</a></div></div>
+
+  <div class="item"><h3>Promotional banner <code>.ds-promo</code></h3>
+    <div class="demo"><div class="ds-promo" style="margin:0">IDOLM@STER TOURS ─ NATIONWIDE ARCADE</div></div></div>
+
+  <div class="item"><h3>Fixed side nav <code>.ds-nav</code></h3>
+    <div class="demo"><p style="color:#666;font-size:12px">固定左ナビ（21.25%幅）。index.html で確認。ロゴ + 縦メニュー。</p></div></div>
+
+  <div class="item"><h3>Scroll reveal <code>.aos</code>（原典 AOS 相当）</h3>
+    <div class="demo"><p style="color:#666;font-size:12px"><code>.aos</code> を付けた要素がスクロールでフェードイン（faithful.js / IntersectionObserver）。</p></div></div>
+
+  <div class="item"><h3>News article <code>.ds-article</code>（news/2026*.html）</h3>
+    <div class="demo"><div class="ds-article">
+      <div class="head"><div class="date">2026.06.08</div><div class="ttl">お知らせタイトル（例）</div></div>
+      <div class="body">本文テキストのプレースホルダ。日付＋見出し＋本文の記事レイアウト。</div>
+    </div></div></div>
+
+  <div class="item"><h3>Sparkle background（png→CSS, animation）<code>.ds-kira = bg_kira_*.png</code></h3>
+    <div class="demo"><div class="ds-kira" style="height:120px;border-radius:8px"></div></div></div>
+
+  <div class="item"><h3>Backgrounds（実背景画像）<code>.ds-bg-kira / .ds-bg-dot</code></h3>
+    <div class="demo" style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">
+      <div class="ds-swatch ds-bg-kira"><code>bg_kira_01.png</code></div>
+      <div class="ds-swatch ds-bg-dot"><code>bg_dot.gif</code></div>
+    </div></div>
+
+  <div class="item"><h3>Animations（使用中）</h3>
+    <div class="demo">
+      <p style="color:#666;font-size:12px">ローディングオーバーレイのフェード（<code>#lovl</code>）、AOS スクロールリビール（<code>.aos</code>）、
+      きらめき背景アニメ（<code>.ds-kira</code> / keyframes）。すべて reduced-motion 対応。</p>
+    </div></div>
+
+</div>
+<script src="faithful.js"></script>
+</body>
+</html>

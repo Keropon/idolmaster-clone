@@ -1,0 +1,91 @@
+/* =====================================================================
+   imas2 — FAITHFUL design system for columbia.jp/idolmaster/2010.
+   Values from the real css/base.css + css/carousel.css:
+   Hiragino stack, #fff + template/bg.jpg, cyan #0097ff, magenta #ff65c7/#ff00a2.
+   Container 990, ticker 982x79, carousel 982x330.
+   ===================================================================== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family:"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    background:#fff url(assets/template/bg.jpg) repeat-y center -250px;
+    color:#000; font-size:13px; line-height:1.6;
+}
+img { display:block; border:0; }
+a, a:link, a:visited { color:#0097ff; text-decoration:none; }
+a:hover { color:#ff00a2; }
+
+#indexTop { width:990px; margin:0 auto; padding:14px 0; }
+
+/* =====================================================================
+   DESIGN-SYSTEM COMPONENTS (semantic = real source)
+   ===================================================================== */
+
+/* Heading lv1 / lv2 = real h1 / h2 ------------------------------------ */
+.ds-h1, h1 { font-size:140%; font-weight:normal; margin:0; color:#0097ff; }
+.ds-h2, h2 { font-size:160%; font-weight:normal; margin:0 0 10px; color:#ff65c7; }
+
+/* News ticker = .newsTickerBg / #newsTicker -------------------------- */
+.ds-ticker, .newsTickerBg { position:relative; width:982px; height:79px; margin:0 auto;
+    background:url(assets/template/newsTicker.png) no-repeat; overflow:hidden; }
+.ds-ticker .track { position:absolute; top:30px; left:26px; white-space:nowrap;
+    display:inline-flex; gap:48px; will-change:transform; }
+.ds-ticker .track a { font-size:110%; color:#0097ff; }
+.ds-ticker .track a:hover { color:#ff00a2; }
+
+/* CD carousel = #carouselWrap / #carousel / ul.column ---------------- */
+.ds-carousel { position:relative; width:982px; height:330px; margin:40px auto; }
+.ds-carousel .view { width:970px; height:318px; margin:0 auto; overflow:hidden; }
+.ds-carousel .strip { display:flex; gap:10px; transition:transform .5s ease; }
+.ds-carousel .strip li { list-style:none; flex:0 0 auto; }
+.ds-carousel .strip img { width:150px; height:150px; object-fit:cover; border:1px solid #b1b1b1; background:#fff; }
+.ds-carousel .nav { position:absolute; top:50%; transform:translateY(-50%); cursor:pointer; z-index:2; }
+.ds-carousel .prev { left:-4px; } .ds-carousel .next { right:-4px; }
+
+/* CD jacket card = ul.column li (jacket + caption) ------------------- */
+.ds-disc { width:150px; }
+.ds-disc img { width:150px; height:150px; object-fit:cover; border:1px solid #b1b1b1; }
+.ds-disc .cap { font-size:11px; color:#333; line-height:1.4; padding-top:4px; }
+.ds-disc .code { color:#ff65c7; font-weight:bold; }
+
+/* Discography info panel = .discoInfo -------------------------------- */
+.ds-disco-info { background:#fff; border:1px solid #b1b1b1; padding:10px 12px; }
+.ds-disco-info h1 { line-height:1; margin:0 0 4px; }
+
+/* Link panel = .lnkInfo --------------------------------------------- */
+.ds-link-panel { border-top:1px solid #f87dcb; padding:8px 0 8px 28px;
+    background:url(assets/template/lnkBg.png) no-repeat 0 6px; }
+
+/* Promotional banner ------------------------------------------------- */
+.ds-promo { background:#ff00a2; color:#fff; font-weight:bold; text-align:center; padding:12px; font-size:120%; }
+
+/* Button = btn_prev/next.png ---------------------------------------- */
+.ds-btn { display:inline-block; }
+
+/* ---- components from the discography DETAIL pages (COCX-*.html) ---- */
+
+/* Detail header = #discoTitle / #titleInfo (h1/h2/h3 stack) */
+.ds-detail-head { background:linear-gradient(#eaf4ff,#fff); border-bottom:2px solid #0097ff; padding:14px 16px; }
+.ds-detail-head h3 { font-size:12px; color:#ff65c7; margin:0; }
+.ds-detail-head h1 { font-size:20px; color:#0097ff; font-weight:normal; margin:2px 0; }
+.ds-detail-head h2 { font-size:13px; color:#666; margin:0; }
+
+/* Track listing = #discIndex (numbered) — generic placeholder content */
+.ds-tracklist { list-style:none; margin:0; padding:0; max-width:560px; }
+.ds-tracklist li { display:flex; gap:12px; padding:7px 4px; border-bottom:1px dotted #b1b1b1; }
+.ds-tracklist .no { color:#ff65c7; font-weight:bold; min-width:2.2em; text-align:right; }
+.ds-tracklist .kakko { color:#999; font-size:11px; }   /* .kakko = real class */
+
+/* Audio-format buttons = wmt.png / ra.png recreated as CSS pills */
+.ds-fmt { display:inline-flex; align-items:center; gap:4px; font-size:10px; font-weight:bold; color:#fff;
+    padding:2px 8px; border-radius:3px; background:#0097ff; }
+.ds-fmt--ra { background:#ff00a2; }
+.ds-fmt::before { content:"▶"; font-size:8px; }
+
+/* ---- BACKGROUNDS (real bg images) ---- */
+.ds-bg-paper { background:#fff url(assets/template/bg.jpg) repeat-y center; }
+.ds-bg-disco { background:#dcc3ce url(assets/template/discoBg.gif) repeat-x; }
+.ds-swatch { height:90px; border:1px solid #b1b1b1; border-radius:4px; display:flex; align-items:flex-end; }
+.ds-swatch code { background:rgba(255,255,255,.85); font-size:10px; padding:2px 6px; margin:6px; border-radius:3px; }
+
+/* ---- ANIMATIONS ---- */
+/* carousel slide (.ds-carousel .strip transform), news ticker scroll (faithful.js) */

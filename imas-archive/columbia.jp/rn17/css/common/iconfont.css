@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'icn_font';
+  src:  url('../../fonts/icn_font_491pby.eot');
+  src:  url('../../fonts/icn_font_491pby.eot#iefix') format('embedded-opentype'),
+    url('../../fonts/icn_font_491pby.ttf') format('truetype'),
+    url('../../fonts/icn_font_491pby.woff') format('woff'),
+    url('../../fonts/icn_font_491pby.svg#icn_font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="mod-icn"], [class*=" mod-icn"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icn_font' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mod-icn001:before {
+  content: "\e900";
+}
+.mod-icn002:before {
+  content: "\e901";
+}
+.mod-icn003:before {
+  content: "\e902";
+}
+.mod-icn004:before {
+  content: "\e903";
+}
+.mod-icn005:before {
+  content: "\e904";
+}
+.mod-icn006:before {
+  content: "\e905";
+}
+.mod-icn007:before {
+  content: "\e906";
+}
+.mod-icn008:before {
+  content: "\e907";
+}
+.mod-icn009:before {
+  content: "\e908";
+}
+.mod-icn010:before {
+  content: "\e909";
+}
+.mod-icn011:before {
+  content: "\e90a";
+}
+.mod-icn012:before {
+  content: "\e90b";
+}
+.mod-icn013:before {
+  content: "\e90c";
+}
+.mod-icn014:before {
+  content: "\e90d";
+}
+.mod-icn015:before {
+  content: "\e90e";
+}
+.mod-icn016:before {
+  content: "\e90f";
+}
+.mod-icn017:before {
+  content: "\e910";
+}
+.mod-icn018:before {
+  content: "\e911";
+}
+.mod-icn019:before {
+  content: "\e912";
+}
+.mod-icn020:before {
+  content: "\e913";
+}
+.mod-icn021:before {
+  content: "\e914";
+}
+.mod-icn022:before {
+  content: "\e915";
+}
+.mod-icn023:before {
+  content: "\e916";
+}
+.mod-icn024:before {
+  content: "\e917";
+}
+.mod-icn025:before {
+  content: "\e918";
+}
+.mod-icn026:before {
+  content: "\e919";
+}
+.mod-icn027:before {
+  content: "\e91a";
+}
+.mod-icn028:before {
+  content: "\e91b";
+}
+.mod-icn029:before {
+  content: "\e91c";
+}
+.mod-icn030:before {
+  content: "\e91d";
+}
+.mod-icn031:before {
+  content: "\e91e";
+}
+.mod-icn032:before {
+  content: "\e91f";
+}
+.mod-icn033:before {
+  content: "\e920";
+}

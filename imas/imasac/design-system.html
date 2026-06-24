@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>imasac — Design System（archive 内部コンポーネント）</title>
+<meta name="description" content="idolmaster.jp/imas/archive の内部ページから抽出した faithful コンポーネント集。Claude Design 用。">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .dsx { width:min(100% - 2rem, 820px); margin:1.6rem auto; }
+  .dsx h1 { color:#ffff66; font-size:20px; border-left:6px solid #00ff00; padding-left:10px; margin-bottom:.3rem; }
+  .dsx .note { color:#bbb; font-size:12px; margin-bottom:1.4rem; }
+  .dsx .item { border:1px solid #009900; margin-bottom:1rem; }
+  .dsx .item > h2 { font-size:12px; background:#003300; color:#ffff66; padding:.4rem .7rem; font-weight:bold; }
+  .dsx .item > h2 code { color:#00ff00; font-weight:normal; }
+  .dsx .demo { padding:1rem; background:#0a0a0a; }
+</style>
+</head>
+<body>
+<div class="dsx">
+  <h1>imasac — Design System</h1>
+  <p class="note">idolmaster.jp/imas/archive の実 CSS（style01/02.css）とページ構造から抽出。
+     見出しは「セマンティック名 <code>= 実ソース</code>」。配色は原典どおり（黒地・黄リンク・緑罫）。</p>
+
+  <div class="item"><h2>Link <code>a</code>（#ffff66 / hover #fff）</h2>
+    <div class="demo"><a href="#">所属アイドル紹介はこちら</a></div></div>
+
+  <div class="item"><h2>Section / Promotional title <code>.ds-title</code></h2>
+    <div class="demo"><div class="ds-title">”アイドルマスター”とは？</div></div></div>
+
+  <div class="item"><h2>News / update item <code>.ds-newsitem = .infosub</code></h2>
+    <div class="demo">
+      <div class="ds-newsitem"><span class="date">2005.07.26</span>　アーケード版 稼働開始。<a href="#">&gt;&gt; 詳細</a></div>
+      <div class="ds-newsitem"><span class="date">2005.08.10</span>　設置店舗リストを更新しました。</div>
+    </div></div>
+
+  <div class="item"><h2>Promotional banner <code>.ds-promo</code></h2>
+    <div class="demo"><div class="ds-promo">★ INSERT COIN ─ 765プロでトップアイドルを目指せ！ ★</div></div></div>
+
+  <div class="item"><h2>Content / body copy <code>.ds-content</code></h2>
+    <div class="demo"><div class="ds-content">
+      <p>本文テキストのコンポーネント。14px / 行間170%。段落・リンクを含む通常のコンテンツ領域に使用。</p>
+      <p>2段落目。<a href="#">関連ページ</a>へのリンクもこの中に置けます。</p>
+    </div></div></div>
+
+  <div class="item"><h2>Frame box <code>.ds-frame</code>（corner gif 相当の緑枠）</h2>
+    <div class="demo"><div class="ds-frame"><div class="ds-frame__h">PROFILE</div>
+      <div class="ds-content">枠付きのコンテンツボックス。プロフィールや注記の囲みに。</div></div></div></div>
+
+  <div class="item"><h2>Data / spec table <code>.ds-table</code></h2>
+    <div class="demo">
+      <table class="ds-table">
+        <tr><th>名前</th><td>（アイドル名）</td></tr>
+        <tr><th>年齢</th><td>—</td></tr>
+        <tr><th>CV</th><td>—</td></tr>
+      </table>
+    </div></div>
+
+  <div class="item"><h2>Sidebar menu / rollover <code>.ds-sidemenu</code> · <code>img[data-ro]</code></h2>
+    <div class="demo">
+      <nav class="ds-sidemenu" style="width:150px">
+        <a href="#"><img data-ro src="assets/img/menu-what.gif" alt="”アイドルマスター”とは？"></a>
+        <a href="#"><img data-ro src="assets/img/menu-idol.gif" alt="所属アイドル紹介"></a>
+      </nav>
+      <p style="color:#bbb;font-size:11px;margin-top:6px">マウスオーバーで <code>menu-x2.gif</code> にスワップ</p>
+    </div></div>
+
+  <div class="item"><h2>gif buttons <code>.ds-btn</code></h2>
+    <div class="demo" style="display:flex;gap:4px">
+      <a href="#"><img class="ds-btn" src="assets/img/button_top.gif" alt="TOP"></a>
+      <a href="#"><img class="ds-btn" src="assets/img/button_map.gif" alt="サイトマップ"></a>
+    </div></div>
+
+  <div class="item"><h2>Corner-gif frame（gif→CSS）<code>.ds-cornerframe = corner1-4.gif</code></h2>
+    <div class="demo"><div class="ds-cornerframe ds-content">角丸の緑枠ボックス。corner*.gif を CSS の border-radius で再現。</div></div></div>
+
+  <div class="item"><h2>Idol name-plate（gif→CSS）<code>.ds-nameplate = *_title01_l.gif</code></h2>
+    <div class="demo"><span class="ds-nameplate"><span class="jp">（アイドル名）</span><span class="en">IDOL</span></span></div></div>
+
+  <div class="item"><h2>Prev / next pager（gif→CSS）<code>.ds-pager = priv_h_b / next_h_b.gif</code></h2>
+    <div class="demo"><div class="ds-pager"><a class="prev" href="#">前へ</a><a class="next" href="#">次へ</a></div></div></div>
+
+  <div class="item"><h2>Backgrounds（実背景 + CRT走査線）<code>.ds-bg-scanline / .ds-bg-grade / .ds-bg-title</code></h2>
+    <div class="demo" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+      <div class="ds-swatch ds-bg-scanline"><code>CRT scanline</code></div>
+      <div class="ds-swatch ds-bg-grade"><code>tablegrade.gif</code></div>
+      <div class="ds-swatch ds-bg-title"><code>titlelogo.jpg</code></div>
+    </div></div>
+
+  <div class="item"><h2>Animations（使用中）</h2>
+    <div class="demo">
+      <p>タイプライター見出し（faithful.js）＋ 点滅カーソル: <span class="ds-anim-blink" style="font-size:18px">THE IDOLM@STER</span></p>
+      <p style="margin-top:8px;color:#bbb;font-size:12px">＋ CRT フリッカー/走査線オーバーレイ（<code>.crt</code>）、サイドメニュー gif ロールオーバー（<code>menu-x2.gif</code>）。</p>
+    </div></div>
+
+</div>
+<script src="faithful.js"></script>
+</body>
+</html>

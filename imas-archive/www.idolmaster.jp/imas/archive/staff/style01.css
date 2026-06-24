@@ -1,0 +1,22 @@
+          body{
+          font-size:13px;
+          line-height:130%;
+background-color:#000000;
+color:#ffffff;
+scrollbar-base-color: #000000;
+scrollbar-face-color: #333333;
+scrollbar-arrow-color: #00FF00;
+scrollbar-highlight-color: #000000;
+scrollbar-3dlight-color: #009900;
+scrollbar-shadow-color: #000000;
+scrollbar-darkshadow-color: #009900;
+          }
+          table{
+          font-size:13px;
+          line-height:130%;
+          }
+
+a:link{color:#ffff66;text-decoration:none;font-weight:bold;}
+a:visited{color:#ffff66;text-decoration:none;font-weight:bold;}
+a:active{color:#ffffff;text-decoration:none;font-weight:bold;}
+a:hover{color:#ffffff;text-decoration:none;font-weight:bold;}

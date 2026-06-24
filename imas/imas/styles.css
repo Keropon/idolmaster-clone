@@ -1,0 +1,192 @@
+/* =====================================================================
+   imas — FAITHFUL design system for idolmaster.jp/imas (renew).
+   Global + homepage layout + the real internal components, taken verbatim
+   from the site's common/base_renew.css and given semantic aliases so they
+   can be consumed as a design system (blog title, blog content, promo, …).
+   ===================================================================== */
+
+/* ---------- global (real base_renew.css) ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    color: #222; font-size: 12px; line-height: 18px;
+    background-color: #b2dded;
+    background-image: url(assets/img_renew/common/base_bg.gif);
+    background-repeat: repeat-x;
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
+                 "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    text-align: center;
+}
+img { display: block; border: 0; }
+a       { color: #e86ea9; text-decoration: underline; }       /* real link colour */
+a:visited { color: #e86ea9; }
+a:hover { color: #f00; }                                       /* real hover colour */
+
+/* ---------- type scale (real .fs-*) ---------- */
+.fs-09 { font-size: 9px;  line-height: 14px; }
+.fs-10 { font-size: 10px; line-height: 15px; }
+.fs-12 { font-size: 12px; line-height: 18px; }
+.fs-14 { font-size: 14px; line-height: 21px; }
+
+/* =====================================================================
+   DESIGN-SYSTEM COMPONENTS  (semantic name → real class)
+   ===================================================================== */
+
+/* Blog / News CARD ---------------------------------------------------- */
+/* ds-card  = .card_table : bordered card container */
+.ds-card, .card_table { margin-bottom: 5px; padding: 10px 15px; border: solid 1px #c8c8d7; background:#fff; text-align:left; }
+/* ds-blog-title = .card_date : the dated headline (blue, underlined) */
+.ds-blog-title, .card_date { color: #234ea5; font-size: 12px; font-weight: bold; line-height: 13px;
+    border-bottom: 1px solid #c8c8d7; padding-bottom: 4px; }
+/* ds-blog-content = .card_comment : the body copy (grey, dotted top rule) */
+.ds-blog-content, .card_comment { color: #555; font-size: 12px; line-height: 14px; padding-top: 3px;
+    border-top: 1px dotted #c8c8d7; margin-top: 4px; }
+.card_txt { padding: 10px 0; text-align:left; }
+
+/* Promotional notice = .soon : "coming soon" promo strip (pink) -------- */
+.ds-promo, .soon { color: #973665; font-size: 14px; font-weight: bold; background-color: #f5d3e1;
+    padding: 10px; border-style: solid; border-width: 0 1px; border-color: #f3b6d4; text-align:left; }
+
+/* Info / data table = .info_table ------------------------------------- */
+.ds-info, .info_table { background-color: #eaf7ff; border: solid 1px #cadaf1; text-align:left; }
+.ds-info td, .info_table td { padding: 6px 10px; font-size:12px; line-height:18px; }
+
+/* NEW flag = .txt_new ------------------------------------------------- */
+.ds-new, .txt_new { color: #c00; font-size: 10px; font-weight: bold; }
+
+/* Menu link / external link = .pt-menu / .pt-menu_out ----------------- */
+.ds-menu-link, .pt-menu { display:inline-block; background:url(assets/common/images/pt_menu.gif) no-repeat 4px 3px;
+    padding: 0 0 0 16px; text-align:left; }
+.ds-menu-link--out, .pt-menu_out { background-image:url(assets/common/images/pt_link_out.gif); background-position:0 2px; }
+
+/* Frame box = .waku --------------------------------------------------- */
+.ds-frame, .waku { border: solid 1px #ccc; padding: 8px; background:#fff; text-align:left; }
+
+/* Promotional / section TITLE — gif headings used site-wide ----------- */
+.ds-section-title { display:block; }            /* the site uses gif titles, e.g. new_title.gif */
+
+/* ---------------------------------------------------------------------
+   PURE HTML+CSS recreations of the gif buttons (rollover = :hover).
+   Recreated from the originals: blue gradient tab, white label,
+   hover turns the label pink — no images.
+   --------------------------------------------------------------------- */
+
+/* Nav tab = hdm_0Xname.gif (90x36). base: white text on blue; hover: pink text */
+.ds-navbtn {
+    display:inline-flex; align-items:center; gap:4px;
+    height:36px; padding:0 12px; white-space:nowrap;
+    font-size:12px; font-weight:bold; color:#fff; text-decoration:none;
+    background:linear-gradient(#6a9bde 0%, #4f7fcb 45%, #3a6bc0 100%);
+    border:1px solid #2a5099; border-top-color:#8fb4e8;
+    border-radius:3px;
+}
+.ds-navbtn::before { content:"・"; color:#bcd4f5; }
+.ds-navbtn:hover, .ds-navbtn:focus-visible { color:#ff9ed8; background:linear-gradient(#5a8bd2 0%, #3f6fc0 45%, #305fb4 100%); }
+.ds-navbtn:hover::before { color:#ff9ed8; }
+
+/* Side button = bt_chara.gif etc (201x47): JP label (pink) + EN sub + arrow */
+.ds-sidebtn {
+    display:flex; align-items:center; gap:10px; width:201px; height:47px; padding:0 12px;
+    text-decoration:none; border-radius:6px;
+    background:linear-gradient(#5f8fd6 0%, #3f6fc0 50%, #335fb2 100%);
+    border:1px solid #284f96; border-top-color:#8fb4e8;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.25);
+}
+.ds-sidebtn .tx { line-height:1.1; }
+.ds-sidebtn .jp { display:block; color:#ffd0ec; font-size:13px; font-weight:bold; }
+.ds-sidebtn .en { display:block; color:#dce9fb; font-size:9px; letter-spacing:.08em; }
+.ds-sidebtn .arw { margin-left:auto; color:#cfe0fb; font-weight:bold; transition:transform .2s ease; }
+.ds-sidebtn:hover { background:linear-gradient(#6f9fe0 0%, #4f7fcb 50%, #3a6bc0 100%); }
+.ds-sidebtn:hover .jp { color:#fff; }
+.ds-sidebtn:hover .arw { transform:translateX(4px); color:#ff9ed8; }
+
+/* MORE button = new_bt_more.gif (small pill) */
+.ds-morebtn {
+    display:inline-flex; align-items:center; gap:4px; height:25px; padding:0 14px;
+    font-size:11px; font-weight:bold; color:#fff; text-decoration:none; border-radius:13px;
+    background:linear-gradient(#7aa6e0,#3f6fc0); border:1px solid #2a5099;
+}
+.ds-morebtn::after { content:"»"; }
+.ds-morebtn:hover { color:#ff9ed8; }
+
+/* Page-title header = title_*.gif (e.g. title_support.gif) recreated in CSS.
+   Original: green bar, JP title left, rule, EN sub-label right. */
+.ds-page-title {
+    display:flex; align-items:center; gap:14px; height:30px; padding:0 14px;
+    color:#fff; font-weight:bold; font-size:15px; letter-spacing:.04em;
+    background:linear-gradient(#9ccb3e, #7cae27); border-radius:3px;
+}
+.ds-page-title::after { content:""; flex:1 1 auto; height:0; border-top:1px dashed rgba(255,255,255,.7); }
+.ds-page-title .en { color:#eaffc0; font-size:11px; letter-spacing:.18em; text-transform:lowercase; font-weight:bold; }
+
+/* Local section menu = .menu-top / .menu-spc / .menu-txt (real classes) */
+.ds-localmenu { margin-top:17px; }
+.ds-localmenu ul { list-style:none; margin:0; padding:0; }
+.ds-localmenu li { padding-top:4px; }
+.ds-localmenu .menu-txt, .menu-txt { font-size:12px; line-height:18px; padding:7px 0 10px 20px; }
+.menu-top { margin-top:17px; } .menu-spc { padding-top:4px; }
+
+/* ---------------------------------------------------------------------
+   GREEN THEME VARIANT = the site's other stylesheet (common/base.css).
+   Same components, green palette. Wrap a section in .theme-green.
+   --------------------------------------------------------------------- */
+.theme-green a { color:#71a648; }
+.theme-green .ds-blog-title, .theme-green .card_date { color:#71a648; }
+.theme-green .ds-info, .theme-green .info_table { background:#d5e0b0; border-color:#b8c889; }
+.theme-green .ds-card, .theme-green .card_table { border-color:#b8c889; }
+.theme-green .ds-frame, .theme-green .waku { border-color:#cfd1c7; }
+.theme-green .ds-page-title { background:linear-gradient(#9ccb3e,#7cae27); }
+
+/* ---- BACKGROUNDS (real background images used by the site) ---- */
+.ds-bg-base { background:#b2dded url(assets/img_renew/common/base_bg.gif) repeat-x top; } /* page top band */
+.ds-bg-content { background:#cbdbf0 url(assets/img_renew/top/img_bg.jpg) no-repeat; }      /* content panel */
+.ds-bg-green { background:#eaf7c4; }                                                        /* green theme fill */
+.ds-swatch { height:90px; border:1px solid #c8c8d7; border-radius:4px; display:flex; align-items:flex-end; }
+.ds-swatch code { background:rgba(255,255,255,.85); font-size:10px; padding:2px 6px; margin:6px; border-radius:3px; }
+
+/* ---- ANIMATIONS (this site's motion) ---- */
+/* banner crossfade (real randomAdv) — see .mainbanner img.on / faithful.js */
+/* nav/side/MORE rollovers = :hover on .ds-navbtn/.ds-sidebtn/.ds-morebtn */
+
+/* =====================================================================
+   HOMEPAGE LAYOUT (faithful)
+   ===================================================================== */
+#container { width: 776px; margin: 0 auto; text-align: left; }
+
+#header { background: url(assets/common/images/hd_bg.gif) top repeat-x; }
+.hd-inner { display: flex; justify-content: center; }
+.hd-center { width: 736px; }
+.hd-title { display: flex; }
+.hd-menu { display: flex; align-items: flex-start; gap: 3px; padding: 4px 0; flex-wrap: wrap; }
+.hd-menu a { display: block; }
+
+.base-bg { width: 754px; margin: 0 auto; background-color: #5080ce;
+    border-style: solid; border-width: 0 2px 2px; border-color: #8aafc0 #8aafc0 #c6cacf; }
+.mainbanner { width: 736px; height: 252px; margin: 0 auto; position: relative; overflow: hidden; background:#5080ce; }
+.mainbanner img { position:absolute; inset:0; width:736px; height:252px; opacity:0; transition:opacity .8s ease; }
+.mainbanner img.on { opacity:1; }
+
+.content { width: 716px; margin: 0 auto; }
+.base-bg2top { background-color:#cbdbf0; background-image:url(assets/img_renew/top/img_bg.jpg); background-repeat:no-repeat;
+    border-style:solid; border-width:0 3px 15px; border-color:#4873bb; }
+.cols { display:flex; gap:14px; padding:20px 10px 10px; align-items:flex-start; }
+
+.newsbox { width:226px; flex:0 0 226px; }
+.news-body { background:#fff; padding:8px 10px; text-align:left; }
+.new-date { color:#113f9d; font-size:10px; font-weight:bold; line-height:14px; border-bottom:1px solid #c8c8d7; padding-bottom:2px; margin-top:8px; }
+.new-date:first-child { margin-top:0; }
+.news-txt { color:#555; font-size:12px; line-height:14px; padding-top:3px; }
+.news-txt a { color:#234ea5; }
+.news-foot { background:#fff; padding:4px 10px 10px; }
+
+.gamecol { flex:1 1 auto; }
+.game-ttl { display:flex; }
+.game-grid { display:flex; gap:12px; margin-top:6px; background:#eaf7ff; padding:8px; }
+.game-left a + a img, .game-right a + a img { margin-top:3px; }
+
+.ft { width:754px; margin:0 auto; }
+.ft-bar { display:flex; align-items:center; background:url(assets/img_renew/common/ft_bg.gif) repeat-x; }
+.ft-bar a, .ft-bar img { display:block; }
+.ft-spacer { flex:1 1 auto; }
+
+[data-ro] { cursor: pointer; }
+@media (prefers-reduced-motion: reduce) { .mainbanner img { transition:none; } }

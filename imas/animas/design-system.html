@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>animas — Design System（anime 内部コンポーネント）</title>
+<meta name="description" content="idolmaster-anime.jp の内部コンポーネント集（faithful）。Claude Design 用。">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body{ background:#fff; }
+  .dsx{ width:min(100% - 2rem, 880px); margin:1.4rem auto; }
+  .dsx .top{ color:#6633CC; font-size:23px; font-weight:bold; }
+  .dsx .note{ color:#888; font-size:12px; margin:.3rem 0 1.4rem; }
+  .dsx .item{ border:1px solid #DAC7D2; border-radius:8px; margin-bottom:1.1rem; overflow:hidden; }
+  .dsx .item > h3{ font-size:12px; background:#f3e9f2; color:#6633CC; padding:.5rem .8rem; }
+  .dsx .item > h3 code{ color:#FF3366; }
+  .dsx .demo{ padding:1rem; }
+</style>
+</head>
+<body>
+<div class="dsx">
+  <div class="top">animas — Design System</div>
+  <p class="note">idolmaster-anime.jp の実 CSS（common.css / products/css.css）から抽出。
+     「セマンティック名 <code>= 実ソース</code>」。配色は原典（紫 #6633CC・桃 #FF3366・青 #0099ff）。</p>
+
+  <div class="item"><h3>Heading lv3 <code>.ds-h3 = h3.png</code></h3>
+    <div class="demo"><div class="ds-h3">PRODUCTS</div></div></div>
+
+  <div class="item"><h3>Heading lv4 <code>.ds-h4 = h4_star</code></h3>
+    <div class="demo"><div class="ds-h4">Blu-ray / DVD</div></div></div>
+
+  <div class="item"><h3>Link <code>a</code>（#0099ff / hover #FF3366）+ 色クラス <code>.red/.pink/.violet/.aqua</code></h3>
+    <div class="demo"><a href="#">詳細はこちら</a>　<span class="pink">PINK</span>　<span class="violet">VIOLET</span>　<span class="aqua">AQUA</span></div></div>
+
+  <div class="item"><h3>Product row <code>.ds-product</code>（jacket + spec + buy）</h3>
+    <div class="demo"><div class="ds-product" style="border:0">
+      <div class="jk"><img src="assets/products/img/jk_pac02.jpg" alt="jacket"></div>
+      <div class="meta"><div class="title">商品名タイトル</div><p>商品説明テキスト。</p>
+        <div class="price">価格：オープン価格</div>
+        <div class="buy"><a class="ds-btn" href="#"><img src="assets/products/img/btnBuy.png" alt="購入"></a>
+          <a class="ds-btn" href="#"><img src="assets/products/img/btnTokuten.png" alt="特典"></a></div></div>
+    </div></div></div>
+
+  <div class="item"><h3>Shop heading <code>.ds-shop-h = h5.shop</code></h3>
+    <div class="demo"><h3 class="ds-shop-h" style="margin:0">取扱店舗</h3></div></div>
+
+  <div class="item"><h3>Subpage menu <code>.ds-menu</code></h3>
+    <div class="demo"><nav class="ds-menu" style="border:0">
+      <a href="#">NEWS</a><a href="#">CHARACTER</a><a href="#">PRODUCTS</a><a href="#">MOVIE</a></nav></div></div>
+
+  <div class="item"><h3>Promotional banner <code>.ds-promo</code></h3>
+    <div class="demo"><div class="ds-promo">TVアニメ「アイドルマスター」 PRODUCTS</div></div></div>
+
+  <div class="item"><h3>Page-title header（png→CSS）<code>.ds-pagettl = titleNews.png</code></h3>
+    <div class="demo"><div class="ds-pagettl">NEWS<span>お知らせ</span></div></div></div>
+
+  <div class="item"><h3>News list <code>.ds-news-list = .newsTxt/.date/.new</code></h3>
+    <div class="demo"><ul class="ds-news-list">
+      <li><span class="date">2011.07.07</span><span class="new">NEW</span><br><a class="newsTxt" href="#">放送情報を更新しました。</a></li>
+      <li><span class="date">2011.07.01</span><br><a class="newsTxt" href="#">公式サイトをオープンしました。</a></li>
+    </ul></div></div>
+
+  <div class="item"><h3>Character summary <code>.ds-chara = .charaSummary</code>（プレースホルダ）</h3>
+    <div class="demo"><div class="ds-chara">
+      <div class="ph">765</div>
+      <div><div class="nm">（キャラクター名）</div><div class="cv">CV: —</div>
+        <div class="bio">キャラクター紹介テキストのプレースホルダ。実際のプロフィールは原典を参照。</div></div>
+    </div></div></div>
+
+  <div class="item"><h3>Backgrounds（実背景画像）<code>.ds-bg-obi / .ds-bg-shop</code></h3>
+    <div class="demo" style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">
+      <div class="ds-swatch ds-bg-obi"><code>header_obi.jpg</code></div>
+      <div class="ds-swatch ds-bg-shop"><code>bg_shop.jpg</code></div>
+    </div></div>
+
+  <div class="item"><h3>Animations（使用中）<code>.ds-anim-reveal</code> / faithful.js reveal</h3>
+    <div class="demo"><div class="ds-anim-reveal" style="padding:14px;background:#f3e9f2;border-radius:8px">
+      スクロールでフェードイン（IntersectionObserver）。読み込み時のライズ演出デモ。</div></div></div>
+
+</div>
+<script src="faithful.js"></script>
+</body>
+</html>

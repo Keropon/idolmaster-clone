@@ -1,0 +1,15 @@
+body#bg{
+
+	background:#ffffff url(../../img/bg_movie_body.jpg) repeat-x 0 0;
+}
+
+
+
+#footerWrap{
+		color:#000000;
+}
+
+#footerWrap a{color:#000000;}
+
+#footerWrap a:hover{text-decoration:underline;}
+

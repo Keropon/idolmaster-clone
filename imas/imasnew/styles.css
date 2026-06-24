@@ -1,0 +1,90 @@
+/* =====================================================================
+   imasnew — FAITHFUL design system for idolmaster-official.jp (20th portal).
+   Original is a Next.js portal; palette extracted from its CSS:
+   hot pink #ff74b9 (dominant), royal blue #3860be, white, greys #d8d8d8.
+   Uses the site's real logo-20th / portal banners. Noto Sans JP + Montserrat.
+   ===================================================================== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family:"Noto Sans JP","Montserrat","メイリオ",Meiryo,sans-serif;
+    color:#222; background:#fff; line-height:1.7;
+}
+img { display:block; border:0; max-width:100%; }
+a { color:#3860be; text-decoration:none; } a:hover { color:#ff74b9; }
+
+.wrap { width:min(100% - 2rem, 1040px); margin:0 auto; }
+
+/* ---- header (real logo-20th) ---- */
+.ds-header { position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92); backdrop-filter:blur(8px);
+    border-bottom:3px solid #ff74b9; }
+.ds-header .row { display:flex; align-items:center; gap:18px; padding:10px 0; }
+.ds-header .logo img { height:48px; width:auto; }
+.ds-nav { display:flex; gap:18px; margin-left:auto; flex-wrap:wrap; font-weight:700; font-size:13px; }
+.ds-nav a { color:#3860be; } .ds-nav a:hover { color:#ff74b9; }
+
+/* =====================================================================
+   DESIGN-SYSTEM COMPONENTS (semantic = real source)
+   ===================================================================== */
+
+/* Hero key visual = 47illust KV ------------------------------------- */
+.ds-hero { position:relative; text-align:center; padding:30px 0; background:
+    linear-gradient(135deg,#ffe6f2,#e7eeff); }
+.ds-hero img { margin:0 auto; max-height:230px; width:auto; }
+
+/* Section / promotional title --------------------------------------- */
+.ds-title { font-family:"Montserrat","Noto Sans JP",sans-serif; font-weight:900; font-size:26px; color:#3860be;
+    text-align:center; padding:30px 0 4px; letter-spacing:.02em; }
+.ds-title b { color:#ff74b9; }
+.ds-title small { display:block; font-size:12px; color:#ff74b9; letter-spacing:.3em; font-weight:700; }
+
+/* News list --------------------------------------------------------- */
+.ds-news { max-width:780px; margin:0 auto; }
+.ds-news .row { display:flex; gap:16px; align-items:center; padding:14px 4px; border-bottom:1px solid #eee; }
+.ds-news .date { color:#999; font-weight:700; font-variant-numeric:tabular-nums; }
+.ds-news .tag { font-size:11px; font-weight:700; color:#fff; background:#ff74b9; padding:2px 12px; border-radius:999px; }
+.ds-news a:hover { color:#ff74b9; }
+
+/* Portal banner grid = common/bnr/* (real banners) ------------------ */
+.ds-bnrgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; }
+.ds-bnr { display:block; border-radius:10px; overflow:hidden; border:1px solid #eee; transition:.25s; }
+.ds-bnr:hover { transform:translateY(-4px); box-shadow:0 14px 30px -16px #ff74b9; border-color:#ff74b9; }
+.ds-bnr img { width:100%; height:auto; }
+
+/* Brand chips ------------------------------------------------------- */
+.ds-brands { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+.ds-brand { padding:10px 18px; border-radius:999px; font-weight:700; color:#fff; font-size:13px; }
+
+/* Button ------------------------------------------------------------ */
+.ds-btn { display:inline-block; background:linear-gradient(90deg,#ff74b9,#3860be); color:#fff; font-weight:700;
+    padding:12px 30px; border-radius:999px; }
+.ds-btn:hover { color:#fff; filter:brightness(1.06); }
+
+/* Promotional banner ------------------------------------------------ */
+.ds-promo { background:linear-gradient(90deg,#ff74b9,#3860be); color:#fff; font-weight:900; text-align:center;
+    padding:18px; letter-spacing:.04em; }
+
+/* footer ------------------------------------------------------------ */
+.ds-footer { background:#222; color:#bbb; text-align:center; padding:26px 0; margin-top:36px; font-size:12px; }
+.ds-footer a { color:#fff; }
+
+/* Side-banner list = common/bnr/bnr-portal_sidemenu (vertical banners) */
+.ds-sidebnr { display:flex; flex-direction:column; gap:10px; max-width:300px; }
+.ds-sidebnr a { display:block; border-radius:8px; overflow:hidden; border:1px solid #eee; transition:.2s; }
+.ds-sidebnr a:hover { border-color:#ff74b9; transform:translateX(-3px); }
+.ds-sidebnr img { width:100%; display:block; }
+
+/* Heading lv2 (sub-section) */
+.ds-h2 { font-family:"Montserrat","Noto Sans JP",sans-serif; font-weight:700; font-size:18px; color:#ff74b9;
+    border-left:5px solid #3860be; padding-left:10px; margin:24px 0 12px; }
+
+/* ---- BACKGROUNDS (the portal's pink/blue washes + KV) ---- */
+.ds-bg-wash { background:linear-gradient(135deg,#ffe6f2,#e7eeff); }
+.ds-bg-pink { background:radial-gradient(120% 120% at 80% -10%, #ffd0e8, #fff); }
+.ds-bg-blue { background:radial-gradient(120% 120% at 0% 10%, #d7e3ff, #fff); }
+.ds-swatch { height:90px; border:1px solid #eee; border-radius:8px; display:flex; align-items:flex-end; }
+.ds-swatch code { background:rgba(255,255,255,.85); font-size:10px; padding:2px 6px; margin:6px; border-radius:3px; }
+
+/* reveal ------------------------------------------------------------ */
+.aos { opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+.aos.in { opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce){ .aos{ opacity:1; transform:none; } }

@@ -1,0 +1,857 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 12px ;
+	line-height: 1.4em;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+
+html {
+	background: #fff url(../template/bg.jpg) repeat-y center -600px;
+	color: #000;
+}	
+html#disco {
+	background: #fff url(../template/bg.jpg) repeat-y center -250px;
+}	
+html#news {
+	background: #fff url(../template/bg.jpg) repeat-y center -550px;
+}	
+html#profile {
+	background-image: none;
+}	
+
+body {
+}	
+* html body {
+	font-size: 100%;
+}
+*:first child+html body {
+	font-size: 100%;
+}
+body#profile {
+	overflow: hidden;
+}	
+
+
+img {
+    border: 0;
+}
+
+a {
+	outline: 0;
+}
+a:link,
+a:visited {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: inherit;
+	color: #ff00a2;
+	}
+a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: inherit;
+	color:#fff;
+	}
+a:active {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: inherit;
+	text-decoration: none;
+	color: #ffa3dd;
+	}
+
+h1 {
+	font-size: 140%;
+	font-weight: normal;
+	margin: 0;
+}
+h2 {
+	color: #ff65c7;
+	font-size: 160%;
+	font-weight: normal;
+	margin: 0;
+}
+h3 {
+	font-size: 90%;
+	margin: 0;
+}
+h4 {
+	font-weight: normal;
+	font-size: 80%;
+	margin: 0;
+}
+hr {
+	clear: both;
+	visibility: hidden;
+}
+
+
+/*------------------------------------------------------------------------------------------------*/
+
+#indexContainer {
+	width: 990px;
+	margin: 30px auto;
+}
+#container {
+	width: 990px;
+	margin: 0 auto 30px;
+}
+#head {
+	width: 990px;
+	height: 181px;
+	position: relative;
+}
+#headBg {
+	width: 750px;
+	height: 181px;
+	background: url(../template/hd_silhouette.png) no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#head img {
+	position: absolute;
+	top: 40px;
+	left: 600px;
+}
+
+/*indexTop------------------------------------------------------------------------------------------------*/
+
+#indexTop {
+	width: 990px;
+	height: 1500px; /*navの高さに合わせる*/
+	margin: 0 auto;
+	position: relative;
+}
+.newsTickerBg {
+	width: 982px;
+	height: 79px;
+	background: url(../template/newsTicker.png);
+}
+#newsTicker {
+	position: absolute;
+	top: 10px;
+	left: 26px;
+	width: 729px;
+}
+#newsTicker a {
+	font-size: 110%;
+}
+#newsTicker a:link {
+	color: #0097ff;
+}
+#newsTicker a:visited {
+	color: #0097ff;
+}
+#newsTicker a:hover {
+	color: #fff;
+}
+#newsTicker a:active {
+	color: #95d3fd;
+}
+#projectImas {
+	position: absolute;
+	top: 12px;
+	right: 20px;
+}
+.topLogo {
+	position: absolute;
+	top: 45px;
+	right: 0;
+}
+
+
+
+
+/*#nav--------------------------------------------------------------------------------------------------------*/
+#nav {
+	width: 960px;
+}
+#nav ul#disco,ul#lnk {
+	list-style: none;
+}
+#nav ul#disco li,ul#lnk li {
+	float: left;
+	display: inline;
+	margin:  0 0 -15px 0;
+	margin:  0 0 -5px 0\9;
+	/margin:  0 0 -30px 0;
+	padding: 0 0 25px 0;
+	/padding: 0;
+}
+#nav ul#disco li {
+	width: 240px;
+	height: 110px;
+	/height: 150px;
+}
+#nav ul#disco li.single {
+	/height: 155px;
+}
+#nav ul#disco li.brdvd {
+	height: 145px;
+	/height: 185px;
+}
+
+
+#nav .discoJacket {
+	background: url(../template/sd100x100.png) 0 0px no-repeat;
+	width: 134px;
+	height: 135px;
+}
+#nav .discoVJacket {
+	background: url(../template/sd100x126.png) 0 0px no-repeat;
+	width: 134px;
+	height: 160px;
+}
+#nav .discoJacketTravel {
+	background: url(../template/sd100x100tr.png) 0 0 no-repeat;
+	width: 134px;
+	height: 160px;
+}
+#nav ul#disco li img {
+	width: 100px;
+	height: 100px;
+	margin: -125px 18px 30px 18px;
+	border: 1px solid #b1b1b1;
+}
+#nav ul#disco li img.brdvd {
+	margin: -145px 18px 30px 18px;
+	height: 126px;
+}
+#nav ul#disco li.cll {
+	background: #fff;
+	height: 145px;
+}
+#nav .discoInfo {
+	margin: -115px 0 0 125px;
+	padding: 0 0 5px 0;
+}
+#nav .discoInfoplus {
+	margin: -105px 0 0 125px;
+}
+#nav .discoVInfo {
+	margin: -135px 0 0 125px;
+	padding: 0 0 8px 0;
+}
+#nav .discoInfo h3 {
+	line-height: 1.2;
+}
+#nav .discoInfo h1 {
+	line-height: 1;
+	margin: 3px 0 0 0;
+}
+#nav .discoVInfo h1 ,#nav .discoInfoplus h1 {
+	line-height: 1;
+}
+
+
+ul#banner {
+	clear: left;
+	margin: 35px auto 5px;
+	border-top: 1px solid #f87dcb;
+	list-style: none;
+}
+ul#banner li {
+	margin: 10px 5px 10px 5px;
+	/margin: 13px 5px 0px 5px;
+	float: left;
+	display: inline;
+	width: 200px;
+	height: 40px;
+}
+
+
+
+
+#nav ul#lnk {
+	clear: left;
+	margin: 30px 0 0 0;
+	border-top: 1px solid #f87dcb;
+}
+#nav ul#lnk li {
+	margin: 20px 10px 0 18px;
+}
+#nav .lnkBg {
+	background: url(../template/lnkBg.png) 0 0px no-repeat;
+	width: 167px;
+	height: 46px;
+}
+#nav .lnkInfo {
+	margin: -46px 0 0 0;
+}
+#nav .lnkInfo h1 {
+	font-weight: bold;
+}
+ul#lnk li#newsLnk .lnkBg {
+	background: url(../template/newsLnkBg.png) 0 0px no-repeat;
+	width: 267px;
+}
+ul#lnk li#newsLnk a:link {
+	color: #0097ff;
+}
+ul#lnk li#newsLnk a:visited {
+	color: #0097ff;
+}
+ul#lnk li#newsLnk a:hover {
+	color: #fff;
+}
+ul#lnk li#newsLnk a:active {
+	color: #ced6f8;
+}
+
+
+#nav {
+	margin: 0 auto;
+	/margin: 0 auto 30px;
+}
+#indexTop #nav {
+	margin: 0 auto;
+	position: absolute;
+	top: 700px;
+	left: 11px;
+}
+
+/*#discography------------------------------------------------------------------------------------------*/
+#discography {
+	background: #dcc3ce url(../template/discoBg.gif) repeat-x;
+	width: 100%;
+	padding: 20px 0 20px 0;
+}
+#discography ul {
+	list-style: none;
+	width: 990px;
+	margin: 0 auto;
+}
+#discography ul li {
+	display: inline;
+	padding: 0 0 10px 0;
+	/padding: 0;
+	height: 70px;
+}
+#discography ul li#discoHead {
+	display: block;
+	margin: 0;
+	padding: 0;
+	font-family: Impact;
+	font-size: 460%;
+	color: #d6a5bb;
+	line-height: 1;
+	letter-spacing: -1px;
+	height: 45px;
+}
+
+a img.jacketLink ,a:link img.jacketLink,a:visited img.jacketLink {
+	border: 1px solid #b1b1b1;
+}
+a:hover img.jacketLink {
+	border: 1px solid #fff;
+}
+a:active img.jacketLink {
+	border: 1px solid #ffa3dd;
+}
+
+
+#copyright {
+	font-size: 80%;
+	width: 990px;
+	margin: 20px auto 0;
+	line-height: 2;
+}
+#copyright a {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+/*title------------------------------------------------------------------------------------------*/
+#discoTitle {
+	width: 982px;
+	height: 150px;
+	background: url(../template/titleBg.png) no-repeat;
+	position: relative;
+}
+#discoTitle #titleInfo {
+	position: absolute;
+	top: 25px;
+	left: 35px;
+}
+#discoTitle h3 {
+	font-size: 100%;
+}
+#discoTitle h1 img {
+	margin: 5px 0;
+}
+#jacket {
+	background: url(../template/sd430x430.png) no-repeat;
+	padding: 10px 17px 30px 17px;
+	position: absolute;
+	top: 15px;
+	right: 20px;
+}
+#brdjacket {
+	background: url(../template/sd430x540.png) no-repeat;
+	padding: 10px 17px 30px 17px;
+	position: absolute;
+	top: 15px;
+	right: 20px;
+}
+#tokutenjacket {
+	background: url(../template/sd250x300.png) no-repeat;
+	padding: 10px 17px 30px 17px;
+	position: absolute;
+	top: 400px;
+	left: 20px;
+}
+#brdjacket img ,#jacket img,#tokutenjacket img {
+	border: 1px solid #b1b1b1;
+}
+#brdjacketCap {
+	font-size: 80%;
+	position: absolute;
+	top: 580px;
+	left: 520px;
+}
+#tenkaijacket {
+	padding: 10px 17px 30px 17px;
+	position: absolute;
+	top: 770px;
+	right: 20px;
+}
+
+ul#sampleMov {
+	list-style: none;
+	position: absolute;
+	top: 615px;
+	right: 20px;
+}
+ul#sampleMovTokuten {
+	list-style: none;
+	position: absolute;
+	top: 780px;
+	right: 20px;
+}
+ul#sampleMov li,ul#sampleMovTokuten li {
+	background: url(../template/movBg.png) no-repeat;
+	width: 462px;
+	height: 132px;
+}
+ul#sampleMov li img,ul#sampleMovTokuten li img {
+	float: left;
+	margin: 15px 10px 20px 23px;
+	border: 1px solid;
+}
+ul#sampleMov li p,ul#sampleMovTokuten li p {
+	padding: 46px 0 20px 0;
+}
+ul#sampleMov li p img,ul#sampleMovTokuten li p img {
+	border: 1px none;
+	margin: 0;
+}
+ul#sampleMov a:hover {
+	color: #fcf;
+}
+ul#sampleMov a:active {
+	color: #ccc;
+}
+ul#sampleMovTokuten a:hover {
+	color: #fcf;
+}
+ul#sampleMovTokuten a:active {
+	color: #ccc;
+}
+
+ul#sampleMov2 {
+	list-style: none;
+	position: absolute;
+	top: 615px;
+	right: 20px;
+}
+ul#sampleMov2Tokuten {
+	list-style: none;
+	position: absolute;
+	top: 780px;
+	right: 20px;
+}
+ul#sampleMov2 li,ul#sampleMovTokuten li {
+	background: url(../template/movBg2.png) no-repeat;
+	width: 462px;
+	height: 322px;
+	text-align: center;
+}
+ul#sampleMov2 li img,ul#sampleMovTokuten li img {
+	float: left;
+	margin: 15px 10px 20px 23px;
+	border: 1px solid;
+}
+ul#sampleMov2 li p,ul#sampleMovTokuten li p {
+	padding: 20px 0 5px 0;
+	/padding: 10px 0 5px 0;
+}
+* html ul#sampleMov2 li p,ul#sampleMovTokuten li p {
+	padding: 20px 0 5px 0;
+}
+ul#sampleMov2 li p img,ul#sampleMovTokuten li p img {
+	border: 1px none;
+	margin: 0;
+}
+ul#sampleMov2 a:hover {
+	color: #fcf;
+}
+ul#sampleMov2 a:active {
+	color: #ccc;
+}
+ul#sampleMov2Tokuten a:hover {
+	color: #fcf;
+}
+ul#sampleMov2Tokuten a:active {
+	color: #ccc;
+}
+ul#sampleMov2 li .youtube {
+	border: 1px none;
+	width: 462px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+#discIndex {
+	margin: 0 0 50px 0;
+}
+#discIndex ol {
+	margin: 15px 0 0 0;
+	padding: 0 15px 0 65px;
+	list-style-type: decimal-leading-zero;
+}
+#discIndex ol li {
+	margin: 10px 0;
+	padding: 0 0 5px 0;
+	color: #666;
+}
+#discIndex h2 {
+	color: #333;
+	font-weight: bold;
+	font-size: 110%;
+	margin: 0 0 3px 0;
+	border-bottom: 1px dotted #f4adda;
+}
+#discIndex h2.encore {
+	color: #666;
+	font-weight: bold;
+	font-size: 110%;
+	margin: 0 0 3px 0;
+	border-bottom: none;
+	padding: 0 15px 0 35px;
+}
+#discIndex h2 a {
+	font-weight: normal;
+	font-size: 80%;
+	margin: 0 0 3px 0;
+}
+#discIndex h2 img {
+	width: 20px;
+	height: 19px;
+	margin: 0 0 -5px 0;
+}
+#discIndex h2.blurayBox {
+	margin: 20px 0 0 35px;
+}
+h2.tokuten {
+	padding-top: 315px;
+}
+
+.kakko {
+	font-weight: normal;
+	font-size: 80%;
+	color: #666;
+}
+#discIndex h3 {
+	margin: 15px 0 25px 35px;
+}
+
+#discIndex dl {
+	margin: 15px 0 0 0;
+	padding: 0 15px 0 35px;
+	color: #666;
+}
+#discIndex dt {
+	font-weight: bold;
+	border-bottom: 1px dotted #f4adda;
+	margin: 0 0 3px 0;
+}
+#discIndex dd {
+	margin: 0 0 10px 0;
+}
+
+/*news------------------------------------------------------------------------------------------*/
+#news {
+}
+#newsTitle {
+	width: 982px;
+	height: 79px;
+	background: url(../template/newsTitle.png) no-repeat;
+	margin: 0 0 30px 0;
+}
+#newsNav {
+	width: 267px;
+	margin: 0 0 0 30px;
+	float: left;
+}
+*html #newsNav {
+	margin: 0 0 0 15px;
+}
+#newsNav dl {
+}
+#newsNav dl dt {
+	padding: 15px 0 0 0;
+}
+#newsNav dl dd {
+	margin: -50px 0 0 0;
+	padding: 0 0 5px 45px;
+	border-bottom: 1px solid #59bbff;
+	min-height: 60px;
+}
+.newsNavbg {
+	width: 45px;
+	height: 46px;
+	background: url(../template/newsNavbg.png) 0 0px no-repeat;
+}
+#newsNav dl a:link {
+	color: #0097ff;
+	font-weight: normal;
+}
+#newsNav dl a:visited {
+	color: #0097ff;
+}
+#newsNav dl a:hover {
+	color: #fff;
+}
+#newsNav dl a:active {
+	color: #ff00a2;
+}
+
+#newsNav dl a:link h2 {
+	color: #0097ff;
+	font-weight: bold;
+	font-size: 100%;
+}
+#newsNav dl a:visited h2 {
+	color: #0097ff;
+}
+#newsNav dl a:hover h2 {
+	color: #fff;
+}
+#newsNav dl a:active h2 {
+	color: #ff00a2;
+}
+
+*html #newsNav dl a {
+	font-size: 100%;
+	font-weight: lighter;
+}
+*html #newsNav dl h2  {
+	font-size: 100%;
+	font-weight: bold;
+}
+#newsNav dl a.selected,#newsNav dl a.selected h2 {
+	color: #ff00a2;
+}
+#station {
+	margin: 40px 0 0 0;
+	padding: 10px;
+	width: 247px;
+	border: 1px solid #59bbff;
+	position: relative;
+}
+#station h4 {
+	font-size: 90%;
+	font-weight: bold;
+	border-bottom: 1px solid #59bbff;
+	margin: 35px 0 10px;
+	/margin: 45px 0 10px;
+	padding: 0 0 5px 0;
+}
+#station img {
+	position: absolute;
+	top: -20px;
+	left: 10px;
+}
+#station #nico {
+	padding: 5px 0 0 0;
+	border-top: 1px solid #59bbff;
+	margin: 10px 0 0;
+}
+
+
+#newsContent {
+	width: 625px;
+	margin: 0 15px 30px 0;
+	/margin: 0 30px 30px 0;
+	float: right;
+}
+*html #newsContent {
+	width: 605px;
+	margin: 0 10px 30px 0;
+}
+p.loading {
+	text-align: center;
+	margin: 30px;
+	color: #da6db2;
+}
+#newsContent h5 {
+	margin: 10px 0 0 0;
+	font-size: 100%;
+	font-weight: bold;
+}
+#newsContent h2 {
+	margin: 0 0 40px 0;
+	font-size: 140%;
+	font-weight: bold;
+	color: #000;
+}
+#gototop {
+	text-align: right;
+	clear: both;
+	border-bottom: 1px solid #59bbff;
+	font-size: 90%;
+	width: 940px;
+	margin: 0 auto 20px;
+	padding: 5px 10px;
+}
+#gototop a:link {
+	color: #0097ff;
+}
+#gototop a:visited {
+	color: #0097ff;
+}
+#gototop a:hover {
+	color: #fff;
+}
+#gototop a:active {
+	color: #ced6f8;
+}
+
+
+
+/*#PROFILE tsuika------------------------------------------------------------------------------------*/
+
+ #chara {
+	width: 968px;
+	height: 258px;
+	position: absolute;
+	top: 480px;
+	left: 10px;
+}
+
+#chara .chara_01 {
+	position: absolute;
+	bottom: 2px;
+	left: 0;
+}
+#chara .chara_02 {
+	position: absolute;
+	bottom: 0px;
+	left: 61px;
+}
+#chara .chara_03 {
+	position: absolute;
+	bottom: 0px;
+	left: 134px;
+}
+#chara .chara_04 {
+	position: absolute;
+	bottom: 0px;
+	left: 215px;
+}
+#chara .chara_05 {
+	position: absolute;
+	bottom: 0px;
+	left: 289px;
+}
+#chara .chara_06 {
+	position: absolute;
+	bottom: 0px;
+	left: 347px;
+}
+#chara .chara_07 {
+	position: absolute;
+	bottom: 0px;
+	left: 432px;
+}
+#chara .chara_08 {
+	position: absolute;
+	bottom: 0px;
+	left: 506px;
+}
+#chara .chara_09 {
+	position: absolute;
+	bottom: 0px;
+	left: 578px;
+}
+#chara .chara_10 {
+	position: absolute;
+	bottom: 0px;
+	left: 653px;
+}
+#chara .chara_11 {
+	position: absolute;
+	bottom: 0px;
+	left: 731px;
+}
+#chara .chara_12 {
+	position: absolute;
+	bottom: 0px;
+	left: 825px;
+}
+#chara .chara_13 {
+	position: absolute;
+	bottom: 0px;
+	left: 904px;
+}
+
+#wrapper {
+	height: 6160px;
+	zoom: 1;
+}
+
+.profile {
+	width: 990px;
+	height: 440px;
+}
+.makoto {background: url(../template/pr_makoto.jpg); no-repeat;}
+.takane {background: url(../template/pr_takane.jpg); no-repeat;}
+.hibiki {background: url(../template/pr_hibiki.jpg); no-repeat;}
+.yayoi {background: url(../template/pr_yayoi.jpg); no-repeat;}
+.chihaya {background: url(../template/pr_chihaya.jpg); no-repeat;}
+.miki {background: url(../template/pr_miki.jpg); no-repeat;}
+.haruka {background: url(../template/pr_haruka.jpg); no-repeat;}
+.yukiho {background: url(../template/pr_yukiho.jpg); no-repeat;}
+.mami {background: url(../template/pr_mami.jpg); no-repeat;}
+.ami {background: url(../template/pr_ami.jpg); no-repeat;}
+.iori {background: url(../template/pr_iori.jpg); no-repeat;}
+.azusa {background: url(../template/pr_azusa.jpg); no-repeat;}
+.ritsuko {background: url(../template/pr_ritsuko.jpg); no-repeat;}
+
+#profileNav {
+	z-index:10;
+	float:left;
+	width: 990px;
+	height: 90px;
+	margin: 335px 0 0 0;
+	text-align: center;
+}
+
+/*#CME tsuika------------------------------------------------------------------------------------------*/
+.style1 {font-weight: bold; color: #FF3399;}
+p{margin: 1em 0 0 0}
+.style4 {color: #FF0000}
+.style6 {color: #FF0000; font-weight: bold; }
+td {padding: 5px;}
+
+
+
+ul#disco:after,ul#lnk:after,#discography ul:after {
+	content: "";
+	display: block;
+	clear: both;
+}

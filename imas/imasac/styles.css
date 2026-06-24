@@ -1,0 +1,98 @@
+/* =====================================================================
+   imasac — FAITHFUL design system for idolmaster.jp/imas/archive (2005).
+   Values taken verbatim from the real style01.css / style02.css:
+   body #000, 14px/140%, links #ffff66 (hover #fff), green scrollbars,
+   .infosub #333 (hover #555). 780px table layout.
+   ===================================================================== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-size:14px; line-height:140%;
+    background-color:#000000; color:#ffffff;
+    font-family:"ＭＳ Ｐゴシック","MS PGothic","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,sans-serif;
+    /* real Win-IE scrollbar tint (modern equivalent) */
+    scrollbar-color:#333333 #000000;
+}
+img { display:block; border:0; }
+a, a:link, a:visited { color:#ffff66; text-decoration:none; font-weight:bold; }   /* real link colour */
+a:hover, a:active { color:#ffffff; }                                              /* real hover */
+
+#container { width:780px; margin:0 auto; }
+
+/* ---- title logo bar (titlelogo.jpg bg + TOP / map / first buttons) ---- */
+.ds-titlebar { width:780px; height:100px; background:url(assets/img/titlelogo.jpg) no-repeat; position:relative; }
+.ds-titlebar .btns { position:absolute; right:8px; bottom:8px; display:flex; gap:4px; }
+.ds-titlebar .btns a { display:block; }
+
+/* ---- left sidebar gif menu (rollover) ---- */
+.layout { display:flex; }
+.ds-sidemenu { width:150px; background:#000 url(assets/img/tablegrade.gif) repeat-y; text-align:center; padding-top:6px; }
+.ds-sidemenu a { display:inline-block; margin-bottom:6px; }
+.ds-main { flex:1 1 auto; padding:10px 12px; min-width:0; }
+
+/* =====================================================================
+   DESIGN-SYSTEM COMPONENTS (semantic = real source)
+   ===================================================================== */
+
+/* News / update item = .infosub (real, from body.htm) ----------------- */
+.ds-newsitem, .infosub { text-align:left; line-height:130%; margin:0 9px 6px 11px; background-color:#333333; padding:6px 8px; }
+.ds-newsitem a:hover, .infosub a:hover { color:#fff; background-color:#555555; font-weight:normal; font-size:10px; }
+.ds-newsitem .date { color:#ffff66; font-weight:bold; }
+
+/* Promotional / section title — green glow heading -------------------- */
+.ds-title { color:#ffff66; font-size:18px; font-weight:bold; line-height:1.3;
+    border-left:6px solid #00ff00; padding:2px 0 2px 10px; margin:0 0 10px; }
+
+/* Promotional banner strip ------------------------------------------- */
+.ds-promo { background:#111; border:1px solid #009900; color:#00ff00; font-weight:bold;
+    text-align:center; padding:10px; letter-spacing:.05em; }
+
+/* Corner-gif rounded frame = corner1/2/3.gif (real chrome) ------------ */
+.ds-frame { border:1px solid #009900; background:#0a0a0a; padding:12px; }
+.ds-frame .ds-frame__h { color:#00ff00; font-weight:bold; margin-bottom:6px; }
+
+/* Body copy / content ------------------------------------------------- */
+.ds-content { color:#fff; font-size:14px; line-height:170%; text-align:left; }
+.ds-content p { margin-bottom:.8em; }
+
+/* Data / spec table --------------------------------------------------- */
+.ds-table { width:100%; border-collapse:collapse; font-size:13px; }
+.ds-table th, .ds-table td { border:1px solid #009900; padding:6px 8px; text-align:left; vertical-align:top; }
+.ds-table th { background:#003300; color:#ffff66; white-space:nowrap; }
+
+/* gif button = button_top / button_map etc --------------------------- */
+.ds-btn { display:inline-block; }
+
+/* ---- components from the archive INTERNAL pages (idol/beyond/...) ---- */
+
+/* Corner-gif rounded frame = corner1-4.gif -> CSS rounded green box */
+.ds-cornerframe { border:1px solid #00aa44; border-radius:10px; background:#0a0a0a;
+    padding:14px 16px; box-shadow:0 0 0 1px #003300 inset; }
+
+/* Idol name-plate header = *_title01_l.gif -> CSS */
+.ds-nameplate { display:inline-flex; align-items:baseline; gap:10px; padding:6px 16px;
+    background:linear-gradient(#143d18,#0a210d); border:1px solid #00aa44; border-radius:6px; }
+.ds-nameplate .jp { color:#ffff66; font-size:20px; font-weight:bold; text-shadow:0 0 8px rgba(255,255,102,.5); }
+.ds-nameplate .en { color:#00ff66; font-size:11px; letter-spacing:.18em; }
+
+/* Prev / next pager = priv_h_b.gif / next_h_b.gif -> CSS */
+.ds-pager { display:flex; gap:8px; align-items:center; }
+.ds-pager a { display:inline-flex; align-items:center; gap:4px; padding:5px 12px;
+    border:1px solid #009900; color:#ffff66; font-weight:bold; background:#0a130c; border-radius:4px; }
+.ds-pager a:hover { background:#00ff66; color:#04140a; }
+.ds-pager .prev::before { content:"«"; } .ds-pager .next::after { content:"»"; }
+
+/* ---- BACKGROUNDS (real bg images + the CRT scanline) ---- */
+.ds-bg-scanline { background:
+    repeating-linear-gradient(0deg, transparent 0 2px, rgba(0,255,102,.05) 2px 3px),
+    radial-gradient(circle at 50% 0%, #0c1a10 0%, #07090a 70%); }
+.ds-bg-grade { background:#000 url(assets/img/tablegrade.gif) repeat-y; }
+.ds-bg-title { background:url(assets/img/titlelogo.jpg) no-repeat; }
+.ds-swatch { height:90px; border:1px solid #009900; border-radius:4px; display:flex; align-items:flex-end; }
+.ds-swatch code { background:rgba(0,0,0,.7); color:#00ff66; font-size:10px; padding:2px 6px; margin:6px; }
+
+/* ---- ANIMATIONS ---- */
+/* CRT flicker overlay (.crt), blinking cursor, typewriter (faithful.js), menu rollover */
+.ds-anim-blink { color:#00ff66; } .ds-anim-blink::after { content:"█"; animation:blink 1s steps(2) infinite; }
+@keyframes blink { 50%{opacity:0} }
+
+[data-ro] { cursor:pointer; }

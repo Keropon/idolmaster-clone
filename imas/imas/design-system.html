@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>imas — Design System（idolmaster.jp 内部コンポーネント）</title>
+<meta name="description" content="idolmaster.jp/imas の内部ページから抽出した faithful コンポーネント集（デザインシステム）。Claude Design 用。">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* catalog chrome only — not part of the design system */
+  body.ds { background:#eef6fb; text-align:left; }
+  .ds-wrap { width:min(100% - 2rem, 860px); margin:2rem auto; }
+  .ds-h1 { font-size:20px; font-weight:bold; color:#234ea5; margin-bottom:.3rem; }
+  .ds-note { color:#666; margin-bottom:1.6rem; }
+  .ds-item { background:#fff; border:1px solid #cadaf1; border-radius:6px; margin:0 0 1.2rem; overflow:hidden; }
+  .ds-item > h2 { font-size:13px; background:#cbdbf0; color:#234ea5; padding:.5rem .8rem; }
+  .ds-item > h2 code { color:#973665; font-weight:normal; }
+  .ds-demo { padding:1rem .9rem; }
+</style>
+</head>
+<body class="ds">
+<div class="ds-wrap">
+  <div class="ds-h1">imas — Design System</div>
+  <p class="ds-note">idolmaster.jp/imas の実 CSS（base_renew.css）から抽出した内部コンポーネント。
+     各見出しは「セマンティック名 <code>= 実クラス</code>」。配色・余白は原典どおり。</p>
+
+  <div class="ds-item"><h2>Link / リンク <code>a</code></h2>
+    <div class="ds-demo"><a href="#">アイドルマスター 公式情報はこちら</a>　（hover: 赤）</div></div>
+
+  <div class="ds-item"><h2>Menu link <code>.ds-menu-link = .pt-menu</code> / 外部 <code>.ds-menu-link--out = .pt-menu_out</code></h2>
+    <div class="ds-demo">
+      <a class="ds-menu-link" href="#">キャラクタ紹介</a><br>
+      <a class="ds-menu-link" href="#">ダウンロード</a><br>
+      <a class="ds-menu-link ds-menu-link--out" href="#">関連サイト（外部リンク）</a>
+    </div></div>
+
+  <div class="ds-item"><h2>NEW flag <code>.ds-new = .txt_new</code></h2>
+    <div class="ds-demo"><span class="ds-new">NEW</span>　新着情報の見出しに添える赤ラベル</div></div>
+
+  <div class="ds-item"><h2>Blog / News card — title + content <code>.ds-card / .ds-blog-title / .ds-blog-content</code></h2>
+    <div class="ds-demo">
+      <div class="ds-card">
+        <div class="ds-blog-title">2007.07.26　アーケード版 情報更新</div>
+        <div class="ds-blog-content">設置店舗リストと稼働情報を更新しました。詳しくは各ページをご覧ください。</div>
+      </div>
+      <div class="ds-card">
+        <div class="ds-blog-title">2007.07.01　ダウンロードコンテンツ</div>
+        <div class="ds-blog-content">新しいダウンロードコンテンツの配信を開始しました。</div>
+      </div>
+    </div></div>
+
+  <div class="ds-item"><h2>Promotional notice <code>.ds-promo = .soon</code></h2>
+    <div class="ds-demo"><div class="ds-promo">COMING SOON ─ 新コンテンツ 近日公開予定！</div></div></div>
+
+  <div class="ds-item"><h2>Info / data table <code>.ds-info = .info_table</code></h2>
+    <div class="ds-demo">
+      <table class="ds-info" width="100%">
+        <tr><td width="120"><b>タイトル</b></td><td>THE IDOLM@STER</td></tr>
+        <tr><td><b>ジャンル</b></td><td>アイドル プロデュース</td></tr>
+        <tr><td><b>プラットフォーム</b></td><td>アーケード ／ 家庭用</td></tr>
+      </table>
+    </div></div>
+
+  <div class="ds-item"><h2>Frame box <code>.ds-frame = .waku</code></h2>
+    <div class="ds-demo"><div class="ds-frame">枠付きの汎用ボックス。画像やキャプションの囲みに使用。</div></div></div>
+
+  <div class="ds-item"><h2>Type scale <code>.fs-09 / .fs-10 / .fs-12 / .fs-14</code></h2>
+    <div class="ds-demo">
+      <p class="fs-14">14px ─ 小見出し</p>
+      <p class="fs-12">12px ─ 本文（基準）</p>
+      <p class="fs-10">10px ─ 注釈・日付</p>
+      <p class="fs-09">9px ─ 細目</p>
+    </div></div>
+
+  <div class="ds-item"><h2>Rollover button（gif版・行内ナビ）<code>img[data-ro]</code></h2>
+    <div class="ds-demo" style="background:#5080ce;padding:.5rem">
+      <a href="#"><img data-ro src="assets/common/images/hdm_01game.gif" alt="キャラクタ紹介" width="90" height="36"></a>
+      <span style="color:#fff;font-size:11px">← マウスオーバーで _o.gif にスワップ（原典の手法）</span>
+    </div></div>
+
+  <div class="ds-item"><h2>Nav tab（HTML+CSS版）<code>.ds-navbtn</code> ─ rollover = :hover</h2>
+    <div class="ds-demo" style="background:#5080ce;padding:.6rem;display:flex;gap:3px;flex-wrap:wrap">
+      <a class="ds-navbtn" href="#">キャラクタ紹介</a>
+      <a class="ds-navbtn" href="#">イベント</a>
+      <a class="ds-navbtn" href="#">ダウンロード</a>
+      <a class="ds-navbtn" href="#">グッズ販売</a>
+    </div></div>
+
+  <div class="ds-item"><h2>Side button（HTML+CSS版）<code>.ds-sidebtn</code> ─ rollover = :hover</h2>
+    <div class="ds-demo" style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="ds-sidebtn" href="#"><span class="tx"><span class="jp">キャラクタ紹介</span><span class="en">CHARACTERS</span></span><span class="arw">»</span></a>
+      <a class="ds-sidebtn" href="#"><span class="tx"><span class="jp">ダウンロード</span><span class="en">DOWNLOAD</span></span><span class="arw">»</span></a>
+    </div></div>
+
+  <div class="ds-item"><h2>MORE button（HTML+CSS版）<code>.ds-morebtn</code></h2>
+    <div class="ds-demo"><a class="ds-morebtn" href="#">MORE</a></div></div>
+
+  <div class="ds-item"><h2>Page-title header（gif→CSS）<code>.ds-page-title = title_*.gif</code></h2>
+    <div class="ds-demo">
+      <div class="ds-page-title">ユーザーサポート<span class="en">user support</span></div>
+      <div style="height:8px"></div>
+      <div class="ds-page-title">関連リンク<span class="en">links</span></div>
+    </div></div>
+
+  <div class="ds-item"><h2>Local section menu <code>.ds-localmenu = .menu-top/.menu-spc/.menu-txt</code></h2>
+    <div class="ds-demo"><div class="ds-localmenu"><ul>
+      <li><a class="ds-menu-link" href="#">ご利用上の注意</a></li>
+      <li><a class="ds-menu-link" href="#">よくあるご質問</a></li>
+      <li><a class="ds-menu-link ds-menu-link--out" href="#">関連サイト</a></li>
+    </ul></div></div></div>
+
+  <div class="ds-item"><h2>Green theme variant <code>.theme-green</code>（= common/base.css）</h2>
+    <div class="ds-demo theme-green">
+      <div class="ds-page-title">お知らせ<span class="en">information</span></div>
+      <div style="height:8px"></div>
+      <div class="ds-card"><div class="ds-blog-title">2007.07.26　緑テーマの見出し</div>
+        <div class="ds-blog-content">同じコンポーネントを緑系パレットで。内部ページ用の配色違い。</div></div>
+    </div></div>
+
+  <div class="ds-item"><h2>Backgrounds（実背景画像）<code>.ds-bg-base / .ds-bg-content / .ds-bg-green</code></h2>
+    <div class="ds-demo" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+      <div class="ds-swatch ds-bg-base"><code>base_bg.gif (#b2dded)</code></div>
+      <div class="ds-swatch ds-bg-content"><code>img_bg.jpg</code></div>
+      <div class="ds-swatch ds-bg-green"><code>#eaf7c4 (green)</code></div>
+    </div></div>
+
+  <div class="ds-item"><h2>Animations（使用中のモーション）</h2>
+    <div class="ds-demo">
+      <p style="margin-bottom:8px">バナーローテーション（randomAdv 相当・クロスフェード）:</p>
+      <div class="mainbanner" id="banner" style="width:100%;max-width:480px;height:160px"></div>
+      <p style="margin:10px 0 6px">ロールオーバー（gif→:hover）:</p>
+      <div style="background:#5080ce;padding:6px;display:flex;gap:6px">
+        <a class="ds-navbtn" href="#">キャラクタ紹介</a>
+        <a class="ds-sidebtn" href="#" style="width:auto"><span class="tx"><span class="jp">ダウンロード</span><span class="en">DOWNLOAD</span></span><span class="arw">»</span></a>
+      </div>
+    </div></div>
+
+</div>
+<script src="faithful.js"></script>
+</body>
+</html>

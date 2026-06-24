@@ -1,0 +1,235 @@
+29 unique broken targets, 204 total broken refs
+
+### dl/index.htm  (125 callers)
+  060121event/index.htm
+  060121event/repo1.htm
+  060121event/repo2.htm
+  060121event/repo3.htm
+  060723event/index.htm
+  begin/2.htm
+  begin/body.htm
+  begin/index.htm
+  body.htm
+  consumer/2.htm
+  consumer/index.htm
+  event/aou05repo1.htm
+  event/aou05repo2.htm
+  fanletter/body.htm
+  fanletter/index.htm
+  goods/all.htm
+  goods/body.htm
+  goods/book_001.htm
+  goods/book_list.htm
+  goods/disc_001.htm
+  goods/disc_002.htm
+  goods/disc_list.htm
+  goods/disc_list01.htm
+  goods/eventgoods_list.htm
+  goods/goods_001.htm
+  goods/goods_002.htm
+  goods/goods_003.htm
+  goods/goods_list.htm
+  goods/goods_list01.htm
+  goods/goods_list02.htm
+  goods/index.htm
+  goods/refer_01.htm
+  history/body.htm
+  history/index.htm
+  idol/ami.htm
+  idol/azusa.htm
+  idol/chihaya.htm
+  idol/haruka.htm
+  idol/index.htm
+  idol/intro.htm
+  idol/iori.htm
+  idol/makoto.htm
+  idol/ritsuko.htm
+  idol/yayoi.htm
+  idol/yukiho.htm
+  index.htm
+  info/info.htm
+  info/info0.htm
+  info/log.htm
+  info/log0.htm
+  info/log_1.htm
+  info/log_2.htm
+  info/log_3.htm
+  info/log_4.htm
+  info/log_5.htm
+  info/log_99.htm
+  info/map0.htm
+  info/sitemap.htm
+  intro/body.htm
+  intro/day0.htm
+  intro/day1.htm
+  intro/day2.htm
+  intro/day3.htm
+  intro/day4.htm
+  intro/day5.htm
+  intro/day6.htm
+  intro/index.htm
+  intro/point.htm
+  intro/way0.htm
+  intro/way1.htm
+  intro/way2.htm
+  intro/way3.htm
+  intro/way4.htm
+  intro/way5.htm
+  intro/way6.htm
+  locatest/2ndrank.htm
+  locatest/2ndrank2.htm
+  locatest/3rdrank.htm
+  locatest/3rdrank2.htm
+  locatest/body.htm
+  locatest/index.htm
+  locatest/locate1st.htm
+  locatest/locate1st_fromlog.htm
+  locatest/locate2nd.htm
+  locatest/locate2nd_fromlog.htm
+  locatest/rank.htm
+  locatest/rank2.htm
+  locatest/repo.htm
+  locatest/repo_ike.htm
+  locatest/repo_ike2.htm
+  locatest/repo_ike3.htm
+  locatest/repo_sen.htm
+  locatest/repo_sen_fromlog.htm
+  locatest/thanks.htm
+  locatest/thanks2nd.htm
+  locatest/thanks3rd.htm
+  location/area_chug.htm
+  location/area_hokk.htm
+  location/area_kant.htm
+  location/area_kinki.htm
+  location/area_kosh.htm
+  location/area_kyu.htm
+  location/area_tohok.htm
+  location/area_tokai.htm
+  location/body.htm
+  location/index.htm
+  mobile/body.htm
+  mobile/data.htm
+  mobile/dl.htm
+  mobile/index.htm
+  mobile/loca.htm
+  mobile/mail.htm
+  mobile/memories.htm
+  mobile/shop.htm
+  more/index.htm
+  notice/body.htm
+  notice/index.htm
+  qa/body.htm
+  qa/index.htm
+  soundlog/log050311.htm
+  staff/body.htm
+  staff/index.htm
+  staff/log_01.htm
+  support/body.htm
+  support/index.htm
+### ../765shop/idolmaster/  (19 callers)
+  060121event/repo3.htm
+  goods/all.htm
+  goods/body.htm
+  goods/book_001.htm
+  goods/book_list.htm
+  goods/disc_001.htm
+  goods/disc_002.htm
+  goods/disc_list.htm
+  goods/disc_list01.htm
+  goods/eventgoods_list.htm
+  goods/goods_001.htm
+  goods/goods_002.htm
+  goods/goods_003.htm
+  goods/goods_list.htm
+  goods/goods_list01.htm
+  goods/goods_list02.htm
+  goods/index.htm
+  goods/refer_01.htm
+  info/log_4.htm
+### ../img/copyright.gif  (4 callers)
+  intro/way3.htm
+  intro/way4.htm
+  intro/way5.htm
+  intro/way6.htm
+### ../trial/index.htm  (3 callers)
+  begin/body.htm
+  begin/index.htm
+  more/index.htm
+### f_ami.htm  (3 callers)
+  idol/ami.htm
+  idol/index.htm
+  idol/intro.htm
+### f_azusa.htm  (3 callers)
+  idol/azusa.htm
+  idol/index.htm
+  idol/intro.htm
+### f_chihaya.htm  (3 callers)
+  idol/chihaya.htm
+  idol/index.htm
+  idol/intro.htm
+### f_haruka.htm  (3 callers)
+  idol/haruka.htm
+  idol/index.htm
+  idol/intro.htm
+### f_yukiho.htm  (3 callers)
+  idol/index.htm
+  idol/intro.htm
+  idol/yukiho.htm
+### f_yayoi.htm  (3 callers)
+  idol/index.htm
+  idol/intro.htm
+  idol/yayoi.htm
+### f_ritsuko.htm  (3 callers)
+  idol/index.htm
+  idol/intro.htm
+  idol/ritsuko.htm
+### f_iori.htm  (3 callers)
+  idol/index.htm
+  idol/intro.htm
+  idol/iori.htm
+### f_makoto.htm  (3 callers)
+  idol/index.htm
+  idol/intro.htm
+  idol/makoto.htm
+### ../movie/index.htm  (3 callers)
+  intro/body.htm
+  intro/index.htm
+  more/index.htm
+### 765shop/idolmaster/  (2 callers)
+  body.htm
+  index.htm
+### top0810.swf  (2 callers)
+  body.htm
+  index.htm
+### trial/index.htm  (2 callers)
+  body.htm
+  index.htm
+### movie/index.htm  (2 callers)
+  body.htm
+  index.htm
+### img/get_flash_player.gif  (2 callers)
+  idol/index.htm
+  idol/intro.htm
+### img/flash.gif  (2 callers)
+  idol/index.htm
+  idol/intro.htm
+### ../soundlog/yukiho050311.htm  (2 callers)
+  info/log_2.htm
+  soundlog/log050311.htm
+### ../img/btn/btn_movie.gif  (2 callers)
+  intro/body.htm
+  intro/index.htm
+### ../column_to_form.htm  (1 callers)
+  beyond/index.htm
+### repo_ike4.htm  (1 callers)
+  locatest/repo_ike3.htm
+### img/text_chobit.gif  (1 callers)
+  more/index.htm
+### img/btn/btn_taiken.gif  (1 callers)
+  more/index.htm
+### img/text_begin.gif  (1 callers)
+  more/index.htm
+### img/btn/btn_movie.gif  (1 callers)
+  more/index.htm
+### ../arcade/index.html  (1 callers)
+  sitelog.htm

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>imas2 — Design System（columbia 内部コンポーネント）</title>
+<meta name="description" content="columbia.jp/idolmaster 2010 の内部コンポーネント集（faithful）。Claude Design 用。">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body{ background:#fff; }
+  .dsx{ width:min(100% - 2rem, 900px); margin:1.6rem auto; }
+  .dsx .top{ color:#ff65c7; font-size:22px; }
+  .dsx .note{ color:#666; font-size:12px; margin:.3rem 0 1.4rem; }
+  .dsx .item{ border:1px solid #b1b1b1; border-radius:6px; margin-bottom:1.1rem; overflow:hidden; }
+  .dsx .item > h3{ font-size:12px; background:#dcecfb; color:#0097ff; padding:.45rem .7rem; }
+  .dsx .item > h3 code{ color:#ff65c7; }
+  .dsx .demo{ padding:1rem; }
+</style>
+</head>
+<body>
+<div class="dsx">
+  <div class="top">imas2 — Design System</div>
+  <p class="note">columbia.jp/idolmaster（2010）の実 CSS（base.css / carousel.css）から抽出。
+     「セマンティック名 <code>= 実ソース</code>」。配色は原典（白地・水色 #0097ff・桃 #ff65c7）。</p>
+
+  <div class="item"><h3>Heading lv1 / lv2 <code>.ds-h1 / .ds-h2 = h1 / h2</code></h3>
+    <div class="demo"><h2 class="ds-h2">DISCOGRAPHY</h2><h1 class="ds-h1">MASTER ARTIST 2 シリーズ</h1></div></div>
+
+  <div class="item"><h3>Link <code>a</code>（#0097ff / hover #ff00a2）</h3>
+    <div class="demo"><a href="#">タイトル一覧を見る</a></div></div>
+
+  <div class="item"><h3>News ticker <code>.ds-ticker = .newsTickerBg</code></h3>
+    <div class="demo"><div class="ds-ticker"><div class="track" id="ticker">
+      <a href="#">新譜情報</a><a href="#">試聴コンテンツ公開</a><a href="#">Blu-ray BOX</a></div></div></div></div>
+
+  <div class="item"><h3>CD carousel <code>.ds-carousel = #carousel</code></h3>
+    <div class="demo"><div class="ds-carousel" style="margin:10px auto">
+      <img class="nav prev" id="prev" src="assets/template/btn_prev.png" alt="前へ">
+      <img class="nav next" id="next" src="assets/template/btn_next.png" alt="次へ">
+      <div class="view"><ul class="strip" id="strip"></ul></div></div></div></div>
+
+  <div class="item"><h3>CD jacket card <code>.ds-disc = ul.column li</code></h3>
+    <div class="demo" style="display:flex;gap:14px">
+      <div class="ds-disc"><img src="assets/img/img18.jpg" alt="CD jacket"><div class="cap"><span class="code">COCX-36741</span><br>MASTER ARTIST 2</div></div>
+      <div class="ds-disc"><img src="assets/img/img16.jpg" alt="CD jacket"><div class="cap"><span class="code">COCX-36739</span><br>MASTER ARTIST 2</div></div>
+    </div></div>
+
+  <div class="item"><h3>Discography info panel <code>.ds-disco-info = .discoInfo</code></h3>
+    <div class="demo"><div class="ds-disco-info"><h1>タイトル名</h1><p>商品説明テキスト。</p>
+      <div class="ds-link-panel"><a href="#">関連リンク</a></div></div></div></div>
+
+  <div class="item"><h3>Promotional banner <code>.ds-promo</code></h3>
+    <div class="demo"><div class="ds-promo">♪ THE IDOLM@STER MUSIC ♪</div></div></div>
+
+  <div class="item"><h3>Detail header <code>.ds-detail-head = #discoTitle</code></h3>
+    <div class="demo"><div class="ds-detail-head">
+      <h3>THE IDOLM@STER</h3><h1>商品タイトル（例）</h1><h2>COCX-00000 ／ 発売日</h2></div></div></div>
+
+  <div class="item"><h3>Track listing <code>.ds-tracklist = #discIndex</code>（プレースホルダ）</h3>
+    <div class="demo"><ol class="ds-tracklist">
+      <li><span class="no">01</span><span>Track 01 <span class="kakko">(off vocal)</span></span></li>
+      <li><span class="no">02</span><span>Track 02</span></li>
+      <li><span class="no">03</span><span>Track 03</span></li>
+    </ol></div></div>
+
+  <div class="item"><h3>Audio-format buttons（icon→CSS）<code>.ds-fmt / .ds-fmt--ra</code></h3>
+    <div class="demo" style="display:flex;gap:6px">
+      <span class="ds-fmt">WMA</span><span class="ds-fmt ds-fmt--ra">RealAudio</span></div></div>
+
+  <div class="item"><h3>Backgrounds（実背景画像）<code>.ds-bg-paper / .ds-bg-disco</code></h3>
+    <div class="demo" style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">
+      <div class="ds-swatch ds-bg-paper"><code>bg.jpg (repeat-y)</code></div>
+      <div class="ds-swatch ds-bg-disco"><code>discoBg.gif</code></div>
+    </div></div>
+
+  <div class="item"><h3>Animations（使用中）</h3>
+    <div class="demo">
+      <p>CD カルーセル（スライド）＋ ニュースティッカー（スクロール）:</p>
+      <div class="ds-ticker" style="margin-top:8px"><div class="track" id="ticker2"><a href="#">新譜情報</a><a href="#">試聴公開</a><a href="#">Blu-ray BOX</a></div></div>
+    </div></div>
+
+</div>
+<script src="faithful.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* =====================================================================
+   imasac2 — FAITHFUL design system for bandainamco-am.co.jp/.../idolmaster-tours.
+   From the real pc.css: fixed left nav (21.25%), white/blue scheme,
+   blue #3860be / #6a91e1, cyan accent #00cfff, grey #d8d8d8, Noto/Meiryo stack.
+   ===================================================================== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family:"Noto Sans JP","メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3",sans-serif;
+    color:#333; background:#eef4ff; line-height:1.7;
+}
+img { display:block; border:0; max-width:100%; }
+a { color:#3860be; text-decoration:none; } a:hover { color:#00cfff; }
+
+/* fixed left nav (real nav#nav-pc) */
+.ds-nav { position:fixed; top:0; left:0; width:21.25%; min-width:200px; height:100vh; overflow-y:auto;
+    background:hsla(0,0%,100%,.85); border-right:1px solid #d8d8d8; padding:18px 16px; text-align:center; }
+.ds-nav .logo { width:80%; margin:0 auto 18px; }
+.ds-nav ul { list-style:none; }
+.ds-nav li a { display:block; padding:10px 8px; margin-bottom:6px; border-radius:8px; font-weight:700;
+    color:#3860be; background:#f1f6ff; border:1px solid #dae6ff; transition:.2s; }
+.ds-nav li a:hover { background:linear-gradient(90deg,#00cfff,#6a91e1); color:#fff; }
+.main { margin-left:21.25%; }
+@media (max-width:767px){ .ds-nav{ position:static; width:100%; height:auto; } .main{ margin-left:0; } }
+
+/* =====================================================================
+   DESIGN-SYSTEM COMPONENTS (semantic = real source)
+   ===================================================================== */
+
+/* Hero key visual = top/kv ------------------------------------------- */
+.ds-hero { position:relative; }
+.ds-hero img { width:100%; }
+
+/* Section / promotional title --------------------------------------- */
+.ds-title { font-size:26px; font-weight:900; color:#3860be; text-align:center; letter-spacing:.04em;
+    padding:28px 0 6px; }
+.ds-title small { display:block; font-size:12px; color:#6a91e1; letter-spacing:.3em; }
+
+/* News list --------------------------------------------------------- */
+.ds-news { max-width:760px; margin:0 auto; }
+.ds-news .row { display:flex; gap:16px; align-items:center; padding:14px 6px; border-bottom:1px solid #d8d8d8; }
+.ds-news .date { color:#6a91e1; font-weight:700; font-variant-numeric:tabular-nums; }
+.ds-news .tag { font-size:11px; font-weight:700; color:#fff; background:#3860be; padding:2px 10px; border-radius:999px; }
+
+/* Brand card grid = .cardlist brand logos --------------------------- */
+.ds-brands { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:14px; max-width:820px; margin:10px auto; padding:0 10px; }
+.ds-brand { background:#fff; border:1px solid #d8d8d8; border-radius:12px; padding:18px; display:grid; place-items:center;
+    transition:.25s; }
+.ds-brand:hover { transform:translateY(-4px); box-shadow:0 12px 28px -16px #3860be; border-color:#6a91e1; }
+.ds-brand img { max-height:54px; width:auto; }
+
+/* Promotional banner ------------------------------------------------- */
+.ds-promo { background:linear-gradient(90deg,#3860be,#00cfff); color:#fff; font-weight:900; text-align:center;
+    padding:16px; font-size:18px; letter-spacing:.05em; margin-top:28px; }
+
+/* Button ------------------------------------------------------------ */
+.ds-btn { display:inline-block; background:linear-gradient(90deg,#00cfff,#6a91e1); color:#fff; font-weight:700;
+    padding:12px 28px; border-radius:999px; }
+.ds-btn:hover { color:#fff; filter:brightness(1.08); }
+
+/* AOS-style reveal (original used AOS) ------------------------------- */
+.aos { opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
+.aos.in { opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce){ .aos{ opacity:1; transform:none; } }
+
+/* ---- components from the tours NEWS pages + decorative bg/anim ---- */
+
+/* News article header + body (news/2026*.html) */
+.ds-article { max-width:760px; margin:0 auto; }
+.ds-article .head { border-bottom:2px solid #3860be; padding-bottom:8px; margin-bottom:14px; }
+.ds-article .date { color:#6a91e1; font-weight:700; font-variant-numeric:tabular-nums; }
+.ds-article .ttl { font-size:22px; font-weight:900; color:#3860be; margin-top:4px; }
+.ds-article .body { color:#333; line-height:1.9; }
+
+/* Decorative sparkle background = bg_kira_*.png -> CSS animated bg (background/animation) */
+.ds-kira { position:relative; background:
+    radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+    radial-gradient(2px 2px at 70% 60%, #cfe6ff, transparent),
+    radial-gradient(1px 1px at 40% 80%, #fff, transparent),
+    radial-gradient(1px 1px at 85% 25%, #bcd8ff, transparent),
+    linear-gradient(120deg,#1b2a5e,#2a4ea0); background-size:cover;
+    animation:kira 4s ease-in-out infinite; }
+@keyframes kira { 0%,100%{filter:brightness(1)} 50%{filter:brightness(1.25)} }
+@media (prefers-reduced-motion:reduce){ .ds-kira{ animation:none; } }
+
+/* ---- BACKGROUNDS (real bg images + CSS sparkle) ---- */
+.ds-bg-kira { background:#15235a url(assets/images/common/bg_kira_01.png) repeat; }
+.ds-bg-dot { background:#eef4ff url(assets/images/common/bg_dot.gif) repeat; }
+.ds-swatch { height:90px; border:1px solid #d8d8d8; border-radius:6px; display:flex; align-items:flex-end; }
+.ds-swatch code { background:rgba(255,255,255,.85); font-size:10px; padding:2px 6px; margin:6px; border-radius:3px; }
+
+/* loading overlay (real #lovl) -------------------------------------- */
+#lovl { position:fixed; inset:0; z-index:9999; background:#d9f7ff; display:grid; place-items:center;
+    transition:opacity .6s ease; }
+#lovl.hide { opacity:0; pointer-events:none; }
+#lovl .t { color:#6a91e1; font-weight:900; font-size:3vw; animation:lpulse 1.6s linear infinite; }
+@keyframes lpulse { 0%,100%{opacity:.3} 50%{opacity:1} }

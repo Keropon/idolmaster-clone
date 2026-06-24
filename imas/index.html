@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iM@S Faithful Reconstructions + Design Systems</title>
+<meta name="description" content="スクレイプした6つのアイマス関連サイトを、実レイアウト・実画像・実配色で faithful 再現し、内部コンポーネントをデザインシステムとして整理したプロジェクト。">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --pink:#ff74b9; --blue:#3860be; }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{ font-family:"Noto Sans JP",sans-serif; color:#222; background:#f4f6fb; line-height:1.7; }
+  header{ text-align:center; padding:48px 16px 28px; background:linear-gradient(135deg,#ffe6f2,#e7eeff); }
+  header h1{ font-family:Montserrat,sans-serif; font-size:34px; color:var(--blue); }
+  header h1 b{ color:var(--pink); }
+  header p{ color:#555; margin-top:8px; font-size:14px; }
+  .wrap{ width:min(100% - 2rem, 1040px); margin:28px auto; }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; }
+  .card{ background:#fff; border:1px solid #e6e6ef; border-radius:12px; overflow:hidden; transition:.25s; }
+  .card:hover{ transform:translateY(-4px); box-shadow:0 16px 36px -20px var(--pink); border-color:var(--pink); }
+  .card .thumb{ height:120px; display:grid; place-items:center; color:#fff; font-family:Montserrat,sans-serif; font-weight:900; font-size:22px; letter-spacing:.04em; }
+  .card .body{ padding:14px 16px; }
+  .card h2{ font-size:16px; margin-bottom:2px; }
+  .card .src{ color:#888; font-size:12px; }
+  .card .links{ display:flex; gap:10px; margin-top:12px; }
+  .card .links a{ flex:1; text-align:center; font-size:13px; font-weight:700; text-decoration:none; padding:8px; border-radius:8px; }
+  .links .a1{ background:var(--blue); color:#fff; } .links .a1:hover{ background:#2a4ea0; }
+  .links .a2{ background:#fff0f7; color:var(--pink); border:1px solid var(--pink); } .links .a2:hover{ background:var(--pink); color:#fff; }
+  .t-imasnew{ background:linear-gradient(135deg,#ff74b9,#3860be); }
+  .t-imas{ background:linear-gradient(135deg,#e86ea9,#8aafc0); }
+  .t-imasac{ background:#000; color:#00ff66!important; }
+  .t-imas2{ background:linear-gradient(135deg,#0097ff,#ff00a2); }
+  .t-imasac2{ background:linear-gradient(135deg,#3860be,#00cfff); }
+  .t-animas{ background:linear-gradient(135deg,#6633cc,#ff3366); }
+  footer{ text-align:center; color:#888; font-size:12px; padding:30px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>iM@S <b>Faithful</b> Reconstructions</h1>
+  <p>スクレイプした6サイトを実レイアウト・実画像・実配色で再現。各サイトの内部コンポーネントは<br>デザインシステム（blog title / content / promotional title … ）として整理。</p>
+</header>
+
+<div class="wrap">
+  <div class="grid">
+
+    <div class="card"><div class="thumb t-imasnew">20th</div><div class="body">
+      <h2>imasnew</h2><div class="src">idolmaster-official.jp — 20周年ポータル</div>
+      <div class="links"><a class="a1" href="imasnew/index.html">サイト</a><a class="a2" href="imasnew/design-system.html">Design System</a></div></div></div>
+
+    <div class="card"><div class="thumb t-imas">765</div><div class="body">
+      <h2>imas</h2><div class="src">idolmaster.jp — リニューアル トップ（CSSボタン化）</div>
+      <div class="links"><a class="a1" href="imas/index.html">サイト</a><a class="a2" href="imas/design-system.html">Design System</a></div></div></div>
+
+    <div class="card"><div class="thumb t-imasac">2005</div><div class="body">
+      <h2>imasac</h2><div class="src">idolmaster.jp/archive — アーケード版</div>
+      <div class="links"><a class="a1" href="imasac/index.html">サイト</a><a class="a2" href="imasac/design-system.html">Design System</a></div></div></div>
+
+    <div class="card"><div class="thumb t-imas2">♬</div><div class="body">
+      <h2>imas2</h2><div class="src">columbia.jp — 音楽特設 2010</div>
+      <div class="links"><a class="a1" href="imas2/index.html">サイト</a><a class="a2" href="imas2/design-system.html">Design System</a></div></div></div>
+
+    <div class="card"><div class="thumb t-imasac2">TOURS</div><div class="body">
+      <h2>imasac2</h2><div class="src">bandainamco-am.co.jp — アーケード ツアーズ</div>
+      <div class="links"><a class="a1" href="imasac2/index.html">サイト</a><a class="a2" href="imasac2/design-system.html">Design System</a></div></div></div>
+
+    <div class="card"><div class="thumb t-animas">★</div><div class="body">
+      <h2>animas</h2><div class="src">idolmaster-anime.jp — TVアニメ 製品</div>
+      <div class="links"><a class="a1" href="animas/index.html">サイト</a><a class="a2" href="animas/design-system.html">Design System</a></div></div></div>
+
+  </div>
+</div>
+
+<footer>ファンメイド再現（非公式）— 各権利は権利者に帰属。画像は各サイトの素材を使用。</footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+#carouselWrap {
+	margin: 100px auto;
+	width: 982px;
+	height: 330px;
+	background: url(../template/carouselBg.png);
+	position: relative;
+}
+#carouselPrev {
+	position: absolute;
+	top: 160px;
+	left: -12px;
+	cursor: pointer;
+	width: 19px;
+	height: 22px;
+}
+#carouselNext {
+	position: absolute;
+	top: 160px;
+	right: -13px;
+	cursor: pointer;
+	width: 19px;
+	height: 22px;
+}
+#carousel {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 970px;
+	height: 318px;
+	overflow: hidden;
+}
+#carouselInner ul.column {
+	width: 970px;
+	height: 318px;
+	list-style: none;
+	float: left;
+}
+#carouselInner ul.column li {
+	float: left;
+	margin: 0 10px 0 0;
+	display: inline;
+}
+
+*html #carouselInner ul.column li {
+	margin: 0 0 0 0;
+}

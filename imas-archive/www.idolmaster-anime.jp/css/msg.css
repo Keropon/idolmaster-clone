@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+/*
+font-size list (base: 12px)
+ 67% =  8px
+ 75% =  9px
+ 83% = 10px
+ 92% = 11px        175% = 21px
+100% = 12px        184% = 22px
+108% = 13px        192% = 23px
+117% = 14px        200% = 24px
+125% = 15px        209% = 25px
+133% = 16px        217% = 26px
+142% = 17px
+150% = 18px
+159% = 19px
+167% = 20px
+*/
+
+#msg-wrap,
+#msg-box,
+#bd-dvd-box {
+  display: none;
+}
+#msg-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  min-height: 1460px;
+  background: rgba(255, 255, 255, 0.9);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E5FFFFFF', endColorstr='#E5FFFFFF');
+  z-index: 100;
+}
+#bd-dvd-box,
+#msg-box {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+#bd-dvd-box {
+  padding-top: 40px;
+  text-align: center;
+}
+#bd-dvd-box img {
+  border: 3px solid #e0e0e0;
+}
+#btnClose {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: url(../pkgtop/img/close.png) 0 0;
+}
+#btnClose:hover {
+  cursor: pointer;
+  background: url(../pkgtop/img/close.png) 0 -50px;
+}
+.image {
+  width: 1024px;
+  height: 774px;
+  margin: 50px auto 15px;
+  border: 3px #ccc solid;
+  background: url(../img/msg/loading.gif) #fff no-repeat center center;
+}
+.btn-msg {
+  width: 300px;
+  margin: 0 auto;
+}
+.btn-msg a:hover {
+  cursor: pointer;
+}
+#director_message {
+  display: block;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+#director_message:hover {
+  cursor: pointer;
+  opacity: 0.6 !important;
+  -moz-opacity: 0.6 !important;
+  -ms-filter: "alpha(opacity=60)" !important;
+  filter: alpha(opacity=60) !important;
+}
+
+/* kotori */
+#bd-dvd-box {
+  padding-top: 0;
+  height: 100%;
+}
+.kotori-wrap {
+  position: relative;
+  max-width: 1300px;
+  min-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hiddeb;
+}
+.catchBirthday,
+.catchPkg,
+.pkgSummary,
+.visualKotori,
+.ribonR,
+.ribonP,
+.ribonB,
+.ribonY {
+  position: absolute;
+  text-indent:100%;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.catchBirthday {
+  top: 970px;
+  left: 80px;
+  width: 565px;
+  height: 151px;
+  background: url(../img/pkg/kotori/catchBirthday.png);
+}
+.catchPkg {
+  top: 0;
+  right: 50px;
+  width: 227px;
+  height: 174px;
+  background: url(../img/pkg/kotori/catchPkg.png/index.html);
+}
+.pkgSummary {
+  top: 40px;
+  left: 50px;
+  width: 700px;
+  height: 883px;
+  background: url(../img/pkg/kotori/pkgSummary.png);
+}
+.visualKotori {
+  top: 75px;
+  right: -120px;
+  width: 1011px;
+  height: 1115px;
+  background: url(../img/pkg/kotori/visual.png);
+}
+.ribonR {
+  top: 360px;
+  left: -120px;
+  width: 457px;
+  height: 288px;
+  background: url(../img/pkg/kotori/ribonR.png);
+}
+.ribonP {
+  top: 0;
+  left: -70px;
+  width: 179px;
+  height: 160px;
+  background: url(../img/pkg/kotori/ribonP.png);
+}
+.ribonB {
+  top: 0;
+  right: 260px;
+  width: 155px;
+  height: 123px;
+  background: url(../img/pkg/kotori/ribonB.png);
+}
+.ribonY {
+  top: 95px;
+  right: -65px;
+  width: 271px;
+  height: 177px;
+  background: url(../img/pkg/kotori/ribonY.png);
+}

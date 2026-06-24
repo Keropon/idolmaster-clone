@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/*
+font-size list (base: 12px)
+ 67% =  8px
+ 75% =  9px
+ 83% = 10px
+ 92% = 11px        175% = 21px
+100% = 12px        184% = 22px
+108% = 13px        192% = 23px
+117% = 14px        200% = 24px
+125% = 15px        209% = 25px
+133% = 16px        217% = 26px
+142% = 17px
+150% = 18px
+159% = 19px
+167% = 20px
+*/
+
+#movieArea {
+  margin-top: 90px;
+}
+.movieList {
+  width: 600px;
+  margin: 0 auto 20px;
+  padding: 0 0 30px 10px;
+  background: url(../../img/lineImage.png) repeat-x 5px bottom;
+}
+  .movieList dt, .movieList dd {
+    float: left;
+  }
+  .movieList dt {
+    width: 350px;
+    margin-left: 20px;
+    font-size: 150%;
+  }
+.date {
+  color: #ff0000;
+  font-size: 92%;
+}
+
+.movieThumb {
+  position: relative;
+  width: 230px;
+  height: 129px;
+}
+.moviePlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.playBtn {}
+  .playBtn a {
+    display: block;
+    width: 135px;
+    height: 30px;
+    margin: 10px auto 0;
+    border: 1px solid #ff0000;
+    background-image: url(../img/btnPlay.png);
+  }
+  .playBtn a:hover {
+    background-color: #ff0000;
+    background-position: 0 -30px;
+  }

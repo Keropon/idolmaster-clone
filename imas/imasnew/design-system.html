@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>imasnew — Design System（official 内部コンポーネント）</title>
+<meta name="description" content="idolmaster-official.jp（20th portal）の内部コンポーネント集（faithful）。Claude Design 用。">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .dsx{ width:min(100% - 2rem, 940px); margin:1.4rem auto; }
+  .dsx .top{ font-family:Montserrat,sans-serif; color:#3860be; font-size:24px; font-weight:900; }
+  .dsx .top b{ color:#ff74b9; }
+  .dsx .note{ color:#777; font-size:12px; margin:.3rem 0 1.4rem; }
+  .dsx .item{ border:1px solid #eee; border-radius:10px; margin-bottom:1.1rem; overflow:hidden; }
+  .dsx .item > h3{ font-size:12px; background:#fff0f7; color:#3860be; padding:.5rem .8rem; }
+  .dsx .item > h3 code{ color:#ff74b9; }
+  .dsx .demo{ padding:1rem; }
+</style>
+</head>
+<body>
+<div class="dsx">
+  <div class="top">imas<b>new</b> — Design System</div>
+  <p class="note">idolmaster-official.jp（20周年ポータル, Next.js）の配色・実バナーから抽出。
+     「セマンティック名 <code>= 実ソース</code>」。配色は原典（桃 #ff74b9・青 #3860be）。</p>
+
+  <div class="item"><h3>Section / promotional title <code>.ds-title</code></h3>
+    <div class="demo"><div class="ds-title">PORTAL<small>ポータル</small></div></div></div>
+
+  <div class="item"><h3>Link <code>a</code>（#3860be / hover #ff74b9）</h3>
+    <div class="demo"><a href="#">アイドルマスター ポータルへ</a></div></div>
+
+  <div class="item"><h3>News list <code>.ds-news .row</code></h3>
+    <div class="demo"><div class="ds-news">
+      <a class="row"><span class="date">2026.06.20</span><span class="tag">Live</span><span>記念ライブ開催決定</span></a>
+      <a class="row"><span class="date">2026.06.12</span><span class="tag">Goods</span><span>グッズ受注開始</span></a>
+    </div></div></div>
+
+  <div class="item"><h3>Portal banner grid <code>.ds-bnrgrid / .ds-bnr</code>（実バナー）</h3>
+    <div class="demo"><div class="ds-bnrgrid">
+      <a class="ds-bnr" href="#"><img src="assets/20th/common/bnr/bnr_portal.jpg" alt="ポータル"></a>
+      <a class="ds-bnr" href="#"><img src="assets/20th/common/bnr/bnr_idollist.jpg" alt="アイドル名鑑"></a>
+    </div></div></div>
+
+  <div class="item"><h3>Brand chips <code>.ds-brand</code></h3>
+    <div class="demo"><div class="ds-brands" style="justify-content:flex-start">
+      <span class="ds-brand" style="background:#ff74b9">765 ALLSTARS</span>
+      <span class="ds-brand" style="background:#3860be">CINDERELLA GIRLS</span>
+      <span class="ds-brand" style="background:#7a5cff">SHINY COLORS</span>
+    </div></div></div>
+
+  <div class="item"><h3>Button <code>.ds-btn</code></h3>
+    <div class="demo"><a class="ds-btn" href="#">公式ポータルへ</a></div></div>
+
+  <div class="item"><h3>Promotional banner <code>.ds-promo</code></h3>
+    <div class="demo"><div class="ds-promo">20th ANNIVERSARY</div></div></div>
+
+  <div class="item"><h3>Scroll reveal <code>.aos</code></h3>
+    <div class="demo"><p style="color:#777;font-size:12px"><code>.aos</code> 要素がスクロールでフェードイン（faithful.js）。</p></div></div>
+
+  <div class="item"><h3>Heading lv2 <code>.ds-h2</code></h3>
+    <div class="demo"><div class="ds-h2">サブセクション見出し</div></div></div>
+
+  <div class="item"><h3>Side-banner list <code>.ds-sidebnr</code>（実バナー縦並び）</h3>
+    <div class="demo"><div class="ds-sidebnr">
+      <a href="#"><img src="assets/20th/common/bnr/bnr_idollist.jpg" alt="アイドル名鑑"></a>
+      <a href="#"><img src="assets/20th/common/bnr/bnr_youtube.jpg" alt="YouTube Channel"></a>
+    </div></div></div>
+
+  <div class="item"><h3>Backgrounds（ポータルのウォッシュ）<code>.ds-bg-wash / .ds-bg-pink / .ds-bg-blue</code></h3>
+    <div class="demo" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+      <div class="ds-swatch ds-bg-wash"><code>wash</code></div>
+      <div class="ds-swatch ds-bg-pink"><code>pink radial</code></div>
+      <div class="ds-swatch ds-bg-blue"><code>blue radial</code></div>
+    </div></div>
+
+  <div class="item"><h3>Animations（使用中）</h3>
+    <div class="demo"><p style="color:#777;font-size:12px">AOS スクロールリビール（<code>.aos</code>）、バナー/カードのホバーリフト、グラデーションボタン。reduced-motion 対応。</p></div></div>
+
+</div>
+<script src="faithful.js"></script>
+</body>
+</html>

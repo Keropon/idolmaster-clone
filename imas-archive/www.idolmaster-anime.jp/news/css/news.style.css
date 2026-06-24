@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/*
+font-size list (base: 12px)
+ 67% =  8px
+ 75% =  9px
+ 83% = 10px
+ 92% = 11px        175% = 21px
+100% = 12px        184% = 22px
+108% = 13px        192% = 23px
+117% = 14px        200% = 24px
+125% = 15px        209% = 25px
+133% = 16px        217% = 26px
+142% = 17px
+150% = 18px
+159% = 19px
+167% = 20px
+*/
+
+#newsList {
+  width: 600px;
+  margin: 50px auto;
+}
+.date, #newsList h4 { float: left; }
+.date {
+  display: block;
+  padding: 10px 5px;
+  width: 60px;
+  height: 50px;
+  text-align: center;
+  font-size: 150%;
+  background: url(../img/dateBg.png) no-repeat center center;
+}
+#newsList h4 {
+  margin: 5px 0 0 10px;
+  width: 520px;
+  font-size: 150%;
+}
+.newsTxt {
+  margin: 20px 0;
+  font-size: 117%;
+  padding:0 10px 40px 10px;
+  background: url(../../img/lineImage.png) repeat-x bottom;
+}
+.pagenation {
+  padding: 0 30px;
+}
+.pagenation span { padding: 0 30px; }

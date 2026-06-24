@@ -1,0 +1,48 @@
+body { color: #222; font-size: 12px; line-height: 18px; /*margin-bottom: 10px;*/ height: 100%;}
+#container { position: relative; min-height: 100%;}
+td  { font-size: 12px; line-height: 18px }
+a { color: #e86ea9; text-decoration: underline }
+a:visited { color: #e86ea9; text-decoration: underline }
+a:hover    { color: #f00 }
+.base-bg { border-style: solid; border-width: 0 2px 2px; border-color: #b8c889 #b8c889 #cfd1c7 }
+.base-bg2top { background-color: #eaf7c4; background-image: url(../images/img_bg.jpg); background-repeat: no-repeat; border-style: solid; border-width: 0 3px; border-color: #9fc332 }
+.base2-bg-1pen { background-color: #eaf7c4; border-style: solid; border-width: 0 3px; border-color: #9fc332 }
+.base2-bg-2pen  { background-color: #eaf7c4; padding-bottom: 15px; border-style: solid; border-width: 0 3px 0 0; border-color: #9fc332 }
+.menu-top { margin-top: 17px }
+.menu-spc { padding-top: 4px }
+.menu-txt  { font-size: 12px; line-height: 18px; padding-top: 7px; padding-bottom: 10px; padding-left: 20px }
+.title-spc { margin-bottom: 10px }
+.fs-09 { font-size: 9px; line-height: 14px }
+.fs-09nh { font-size: 9px; line-height: 11px }
+.fs-10 { font-size: 10px; line-height: 15px }
+.fs-10h { font-size: 10px; line-height: 20px }
+.fs-10nh { font-size: 10px; line-height: 12px }
+.fs-12 { font-size: 12px; line-height: 18px }
+.fs-12h { font-size: 12px; line-height: 24px }
+.fs-12nh { font-size: 12px; line-height: 14px }
+.fs-14 { font-size: 14px; line-height: 21px }
+.fs-14nh { font-size: 14px; line-height: 16px }
+.pt-menu   { background-image: url("images/pt_menu.gif"); background-repeat: no-repeat; background-attachment: scroll; background-position: 4px 3px; padding: 0 0 0 12px }
+.pt-menu_out { background-image: url("images/pt_link_out.gif"); background-repeat: no-repeat; background-attachment: scroll; background-position: 0 0; padding: 0 0 0 12px }
+.card_base  { padding: 10px 30px }
+.card_table { margin-bottom: 5px; padding: 10px 15px; border: solid 1px #c8c8d7}
+.card_date { color: #71a648; font-size: 12px; font-weight: bold; line-height: 13px; border-style: solid; border-width: 0 0 1px; border-color: #c8c8d7}
+.card_txt { padding: 10px 0 }
+.card_comment  { color: #555; font-size: 12px; line-height: 14px; padding: 3px 0 0; border-style: dotted solid solid; border-width: 1px 0 0; border-color: #c8c8d7 }
+.info_table { background-color: #d5e0b0; border: solid 1px #b8c889 }
+.txt_new { color: #c00; font-size: 10px; font-weight: bold }
+.soon { color: #973665; font-size: 14px; font-weight: bold; background-color: #f5d3e1; padding: 10px; border-style: solid; border-width: 0 1px; border-color: #f3b6d4 }
+.waku { border: solid 1px #cfd1c7 }
+
+div#header { width: 100%; background: url(images/hd_bg.gif) top repeat-x;}
+
+div#footerBneBox {
+  padding-bottom: 130px;
+}
+div#footerBneCol {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
